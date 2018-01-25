@@ -1,0 +1,103 @@
+################################################################
+####### DEBAR FAULT REPORT######################################
+################################################################ 
+I. No of Hops Priority
+
+1) Central Routers
+
+	a) No Faults 
+
+		No of flits for each hop count
+		HOP COUNT	FLITS		PERCENT
+		0		224101		46.9434
+		1		100212		20.9918
+		2		58611		12.2775
+		3		35912		7.52263
+		4		22340		4.67965
+		5		13671		2.86372
+		6		8523		1.78535
+		7		14016		2.93599
+
+		POWER CONSUMPTION: 534023 units (taking into account flits with 6 or less deflections)
+
+	b) N-S 1 Fault (34-26)
+
+		No of flits for each hop count
+		HOP COUNT	FLITS		PERCENT
+		0		107046		42.9886
+		1		35072		14.0846      //No of flits reaching  
+		2		19348		7.76997      //Dest decrease drastic
+		3		12483		5.01305
+		4		9018		3.62154
+		5		6974		2.80069
+		6		5424		2.17823
+		7		53645		21.5433
+
+		POWER CONSUMPTION: 214703 units (taking into account flits with 6 or less deflections)
+
+	c) E-S 1 Fault (27-28)
+
+		No of flits for each hop count
+		HOP COUNT	FLITS		PERCENT   
+		0		205465		44.7567
+		1		90321		19.6747		//No of flits reaching
+		2		54511		11.8742		//dest within bounds
+		3		34860		7.5936
+		4		23217		5.05739
+		5		15472		3.37028
+		6		10148		2.21055
+		7		25077		5.46255
+
+		POWER CONSUMPTION: 535039 units (taking into account flits with 6 or less deflections)
+
+****************************************************************
+
+II. No of deflections Priority
+
+1) Central Routers
+	
+	a) No Faults
+
+		No of flits for each hop count
+		HOP COUNT	FLITS		PERCENT
+		0		135624		28.395
+		1		124963		26.1629
+		2		115163		24.1111      //No of high defl flits
+		3		74502		15.5981		 //reduce, but no defl 
+		4		24201		5.06685		 //also reduce
+		5		3039		0.636261
+		6		141			0.0295205
+		7		1			0.000209365
+
+		POWER CONSUMPTION: 691640 units (taking into account flits with 6 or less deflections)
+
+	b) N-S 1 Fault (34-26)
+
+		WARNING: POSSIBLE NETWORK DEADLOCK - RAIN
+
+	c) E-S 1 Fault (27-28)
+
+		No of flits for each hop count
+		HOP COUNT	FLITS		PERCENT
+		0		119360		26.5896
+		1		100730		22.4394
+		2		85093		18.956
+		3		60679		13.5174
+		4		37472		8.34757
+		5		20968		4.671
+		6		10904		2.42907
+		7		13691		3.04992
+
+		POWER CONSUMPTION: 773105 units (taking into account flits with 6 or less deflections)
+
+################################################################
+
+
+		
+
+
+
+
+
+
+

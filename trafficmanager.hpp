@@ -45,6 +45,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "routefunc.hpp"
 #include "outputset.hpp"
 #include "injection.hpp"
+#include "iq_router_base.hpp"
 #include <assert.h>
 
 //register the requests to a node
@@ -56,14 +57,21 @@ struct Packet_Reply {
   Flit::FlitType type;
 };
 
+extern int no_of_flits;
+extern int no_of_eflits;
+
+class VC;
+
 class TrafficManager : public Module {
 protected:
   unsigned int _sources;
   unsigned int _dests;
   unsigned int _routers;
+  bool c1;
+	//int count_step; // added John
 
   vector<Network *> _net;
-  vector<vector<Router *> > _router_map;
+  vector<vector<Router *> > _router_map;	// just like a double dimension array
 
   vector <Flit *> _flit_pool;
 
@@ -84,7 +92,7 @@ protected:
   vector<vector<int> > _qtime;
   vector<vector<bool> > _qdrained;
   vector<vector<vector<list<Flit *> > > > _partial_packets;
-
+  vector<list<Flit *> > flitpool;	//added shankar
   map<int, Flit *> _measured_in_flight_flits;
   multimap<int, Flit *> _measured_in_flight_packets;
   map<int, Flit *> _total_in_flight_flits;
@@ -194,6 +202,7 @@ protected:
   int   _sample_period;
   int   _max_samples;
   int   _warmup_periods;
+  int   _sim_time;
   vector<vector<short> > _class_array;
   short _sub_network;
 
@@ -229,9 +238,11 @@ protected:
   //flits to watch
   ostream * _stats_out;
   ostream * _flow_out;
+  int count;
 
   // ============ Internal methods ============ 
 protected:
+
   virtual Flit *_NewFlit( );
   virtual void _RetireFlit( Flit *f, int dest );
 
@@ -258,13 +269,17 @@ protected:
   void _LoadWatchList(const string & filename);
 
 public:
+  vector<vector<VC *> > _vc;
+  bool _bless;
+  bool _Mod_MinBD;
+
   TrafficManager( const Configuration &config, const vector<Network *> & net );
   ~TrafficManager( );
-
+  void SetField();
   bool Run( );
 
   void DisplayStats();
-
+  void Inject_Traffic();
   const Stats * GetOverallLatency(int c) { return _overall_avg_latency[c]; }
   const Stats * GetAccepted() { return _overall_accepted; }
   const Stats * GetAcceptedMin() { return _overall_accepted_min; }
@@ -272,6 +287,7 @@ public:
 
   inline int getTime() { return _time;}
   Stats * getStats(const string & name) { return _stats[name]; }
+  bool isOneFree(int x, int y);		//added shankar
 
 };
 

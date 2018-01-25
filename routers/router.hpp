@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <string>
 #include <vector>
+#include <queue>
 
 #include "module.hpp"
 #include "flit.hpp"
@@ -40,14 +41,57 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "flitchannel.hpp"
 #include "channel.hpp"
 #include "config_utils.hpp"
+#include "outputset.hpp"
+#include "vc.hpp"
+#include "fault.hpp"
+
 
 typedef Channel<Credit> CreditChannel;
+class VC;
+//added shankar
+//to order the flits based on their priority
+class order
+{
+public:
+	int pri;
+	Flit *f;
+	VC *vc;
+
+public:
+	order(int p=0, Flit *temp=NULL,   VC *vc1=NULL): pri(p), f(temp), vc(vc1) {}
+	 friend bool operator<(
+	                        const order& x, const order& y) {
+	                if(x.pri < y.pri)
+	                        return true;
+	                return false;
+	        }
+
+};
+//added shankar
+
+union bitfield
+{
+mutable	int e:1;
+mutable int w:1;
+mutable int s:1;
+mutable int n:1;
+mutable int r:1;
+mutable	int x;
+};
+/*struct port_use
+{
+	int e;
+	int w;
+	int n;
+	int s;
+};*/
+//n=1 => port is free
 
 class Router : public Module {
 
 protected:
-  int _id;
-  
+  int _id; int i;
+
   int _inputs;
   int _outputs;
   
@@ -58,23 +102,50 @@ protected:
   int _st_final_delay;
   
   int _credit_delay;
-  
-  vector<FlitChannel *>   *_input_channels;
+
+
+  vector<FlitChannel *>   _input_channels;
   vector<CreditChannel *> *_input_credits;
   vector<FlitChannel *>   *_output_channels;
   vector<CreditChannel *> *_output_credits;
-  vector<bool>            *_channel_faults;
+  vector<bool>           _channel_faults;
+
 
   Credit *_NewCredit( int vcs = 1 );
   void    _RetireCredit( Credit *c );
-
+  bool _bless;	//added shankar
 public:
+
+//to stay for 2 cycles
+
+  int c_threshold;
+  int reinject_flag;
+  Flit *redirect_flit;
+  int redirect_flag;
+
+  list<Flit *> flitbuff1;
+  list<Flit *> flitbuff2;//added kranthi
+  list<Flit *> flitbuff3;
+  bool _Mod_MinBD;
+
+  bool nonempty_vc[5];// = { false };
+  void make_emptyvc();
+  queue<Flit *> sidebuff;// MinBD side buffer
+  Flit *sideeject_flit;
+  int eject_flag;
+  queue<Flit *> core_buff;		//added shankar reg injection of flit
+  vector<int> channel_use;//added shankar
+  union bitfield field;	//added shankar
+  union bitfield const_use;
+ // struct port_use _port_use;
+ // struct port_use const_use;
+ int use_const;
   Router( const Configuration& config,
 	  Module *parent, const string & name, int id,
 	  int inputs, int outputs );
 
   virtual ~Router( );
-
+  virtual bool is4free()=0;
   static Router *NewRouter( const Configuration& config,
 			    Module *parent, string name, int id,
 			    int inputs, int outputs );
@@ -83,7 +154,9 @@ public:
   void AddOutputChannel( FlitChannel *channel, CreditChannel *backchannel );
  
 
-
+  virtual void BufferReinject() = 0;	//For MinBD
+  virtual void Redirect() = 0;
+  virtual void Eject() = 0;
   virtual void ReadInputs( ) = 0;
   virtual void InternalStep( ) = 0;
   virtual void WriteOutputs( ) = 0;
@@ -93,13 +166,13 @@ public:
 
   int GetID( ) const;
 
-
+  virtual void _BlessWrite()=0;
   virtual int GetCredit(int out, int vc_begin, int vc_end ) const = 0;
   virtual int GetBuffer(int i = -1) const = 0;
   virtual int GetReceivedFlits(int i = -1) const = 0;
   virtual int GetSentFlits(int i = -1) const = 0;
   virtual void ResetFlitStats() = 0;
-
+  bool isOneFree();
   int NumOutputs(){return _outputs;}
 };
 

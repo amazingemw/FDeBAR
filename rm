@@ -1,0 +1,17 @@
+====== Traffic class 0 ======
+Overall minimum latency = 0 (1 samples)
+Overall average latency = 292.024 (1 samples)
+Overall maximum latency = 4487 (1 samples)
+Overall minimum transaction latency = 0 (1 samples)
+Overall average transaction latency = 292.024 (1 samples)
+Overall maximum transaction latency = 4487 (1 samples)
+Overall minimum fragmentation = 0 (1 samples)
+Overall average fragmentation = 0 (1 samples)
+Overall maximum fragmentation = 2.22507e-308 (1 samples)
+Overall average accepted rate = 1 (1 samples)
+Overall min accepted rate = 1 (1 samples)
+Slowest flit = 150861
+Average hops = 0 (112039 samples)
+Total run time 59.5373
+
+

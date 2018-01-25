@@ -48,7 +48,7 @@ template<class T>
 class Channel {
 public:
   Channel( int cycles = 1 );
-
+bool b;
   // Physical Parameters
   void SetLatency( int cycles );
   int GetLatency() { return _delay ; }
@@ -61,7 +61,7 @@ public:
 
   // Peek at data
   T* Peek( );
-
+  bool IsEmpty();	//added shankar
 protected:
   int       _delay;
   queue<T*> _queue;
@@ -71,6 +71,18 @@ protected:
 template<class T>
 Channel<T>::Channel( int cycles ) {
   SetLatency(cycles);
+}
+
+//added shankar
+template<class T>
+bool Channel<T>::IsEmpty()
+{
+	b=_queue.empty();
+	if(b)
+	{
+		return true;
+	}
+		return false;
 }
 
 template<class T>

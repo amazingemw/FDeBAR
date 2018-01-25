@@ -1,0 +1,104 @@
+4X4 mesh:
+
+num_vcs     = 1;
+vc_buf_size = 4;
+traffic                = uniform;
+const_flits_per_packet = 1;
+sim_type       = batch; 
+injection_rate = 0.05;
+
+====== Traffic class 0 ======
+Overall minimum latency = 4 (1 samples)
+Overall average latency = 148.335 (1 samples)
+Overall maximum latency = 2265 (1 samples)
+Overall minimum transaction latency = 4 (1 samples)
+Overall average transaction latency = 148.335 (1 samples)
+Overall maximum transaction latency = 2265 (1 samples)
+Overall minimum fragmentation = 0 (1 samples)
+Overall average fragmentation = 0 (1 samples)
+Overall maximum fragmentation = 2.22507e-308 (1 samples)
+Overall average accepted rate = 0.116229 (1 samples)
+Overall min accepted rate = 0.10243 (1 samples)
+Overall batch duration = 8618 (1 samples)
+Slowest flit = 9133
+Average hops = 3.48269 (16000 samples)
+Total run time 0.640196
+
+4X4 mesh:
+
+num_vcs     = 2;
+vc_buf_size = 4;
+traffic                = uniform;
+const_flits_per_packet = 1;
+sim_type       = batch; 
+injection_rate = 0.05;
+====== Traffic class 0 ======
+Overall minimum latency = 4 (1 samples)
+Overall average latency = 14.8374 (1 samples)
+Overall maximum latency = 62 (1 samples)
+Overall minimum transaction latency = 4 (1 samples)
+Overall average transaction latency = 14.8374 (1 samples)
+Overall maximum transaction latency = 62 (1 samples)
+Overall minimum fragmentation = 0 (1 samples)
+Overall average fragmentation = 0 (1 samples)
+Overall maximum fragmentation = 2.22507e-308 (1 samples)
+Overall average accepted rate = 0.233096 (1 samples)
+Overall min accepted rate = 0.205409 (1 samples)
+Overall batch duration = 4304 (1 samples)
+Slowest flit = 14154
+Average hops = 3.51206 (16000 samples)
+Total run time 0.502324
+
+
+
+4X4 mesh:
+
+num_vcs     = 3;
+vc_buf_size = 4;
+traffic                = uniform;
+const_flits_per_packet = 1;
+sim_type       = batch; 
+injection_rate = 0.05;
+====== Traffic class 0 ======
+Overall minimum latency = 4 (1 samples)
+Overall average latency = 12.2142 (1 samples)
+Overall maximum latency = 31 (1 samples)
+Overall minimum transaction latency = 4 (1 samples)
+Overall average transaction latency = 12.2142 (1 samples)
+Overall maximum transaction latency = 31 (1 samples)
+Overall minimum fragmentation = 0 (1 samples)
+Overall average fragmentation = 0 (1 samples)
+Overall maximum fragmentation = 2.22507e-308 (1 samples)
+Overall average accepted rate = 0.267814 (1 samples)
+Overall min accepted rate = 0.236003 (1 samples)
+Overall batch duration = 3747 (1 samples)
+Slowest flit = 2475
+Average hops = 3.50069 (16000 samples)
+Total run time 0.510076
+
+
+4X4 mesh:
+
+num_vcs     = 4;
+vc_buf_size = 4;
+traffic                = uniform;
+const_flits_per_packet = 1;
+sim_type       = batch; 
+injection_rate = 0.05;
+====== Traffic class 0 ======
+Overall minimum latency = 4 (1 samples)
+Overall average latency = 11.931 (1 samples)
+Overall maximum latency = 29 (1 samples)
+Overall minimum transaction latency = 4 (1 samples)
+Overall average transaction latency = 11.931 (1 samples)
+Overall maximum transaction latency = 29 (1 samples)
+Overall minimum fragmentation = 0 (1 samples)
+Overall average fragmentation = 0 (1 samples)
+Overall maximum fragmentation = 2.22507e-308 (1 samples)
+Overall average accepted rate = 0.268533 (1 samples)
+Overall min accepted rate = 0.236637 (1 samples)
+Overall batch duration = 3739 (1 samples)
+Slowest flit = 14837
+Average hops = 3.49344 (16000 samples)
+Total run time 0.558876
+

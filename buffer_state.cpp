@@ -123,22 +123,27 @@ void BufferState::ProcessCredit( Credit *c )
 {
   assert( c );
 
-  for ( int v = 0; v < c->vc_cnt; ++v ) {
+  for ( int v = 0; v < c->vc_cnt; ++v )
+ {
     assert( ( c->vc[v] >= 0 ) && ( c->vc[v] < _vcs ) );
 
-    if ( ( _wait_for_tail_credit ) && 
-	 ( !_in_use[c->vc[v]] ) ) {
+    if ( ( _wait_for_tail_credit ) && 	 ( !_in_use[c->vc[v]] ) )
+    {
+    	cout<<"\n vc="<<v;
       Error( "Received credit for idle buffer" );
     }
 
-    if ( _cur_occupied[c->vc[v]] > 0 ) {
+    if ( _cur_occupied[c->vc[v]] > 0 )
+    {
       --_cur_occupied[c->vc[v]];
 
-      if ( ( _cur_occupied[c->vc[v]] == 0 ) && 
-	   ( _tail_sent[c->vc[v]] ) ) {
-	_in_use[c->vc[v]] = false;
+      if ( ( _cur_occupied[c->vc[v]] == 0 ) &&   ( _tail_sent[c->vc[v]] ) )
+      {
+    	  _in_use[c->vc[v]] = false;
       }
-    } else {
+    }
+    else
+    {
       cout << "VC = " << c->vc[v] << endl;
       Error( "Buffer occupancy fell below zero" );
     }

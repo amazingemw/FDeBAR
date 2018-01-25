@@ -49,11 +49,18 @@ struct Flit {
   bool head;
   bool tail;
   bool true_tail;
-  
+  bool defl;// check for deflected or not:kranthi
+  bool silver;//Silver flit of MinBD
+
+  int port;
+
+  int  ndefl; // Kranthi: Deflection count
+  int  get_port;  // Kranthi: Got the port
+  int  hop_dist;//how far to destination from current router
   int  time;
   int  ttime;
   int  atime;
-
+  int  input; //added kranthi
   int  sn;
   int  rob_time;
 
@@ -88,7 +95,7 @@ struct Flit {
 
   // Fields for arbitrary data
   void* data ;
-
+  int cur_port;	//added shankar
   // Constructor
   Flit() ;
   void Reset();

@@ -1,0 +1,3 @@
+4/1/17
+read make tutorial
+added fault.cpp to source of minbd in makefile

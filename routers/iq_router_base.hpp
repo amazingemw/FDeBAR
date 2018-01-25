@@ -84,6 +84,8 @@ public:
 
 class IQRouterBase : public Router {
 
+public:
+	  vector<vector<VC *> > _vc;
 protected:
   int  _vcs ;
   int  _vc_size ;
@@ -92,10 +94,10 @@ protected:
   queue<int> _routing_vcs;
   set<int> _vcalloc_vcs;  
 
-  vector<vector<VC *> > _vc;
   vector<BufferState *> _next_vcs;
 
   tRoutingFunction   _rf;
+  bRoutingFunction   _rb;//added shankar
 
   PipelineFIFO<Flit> * _crossbar_pipe;
   PipelineFIFO<Credit> * _credit_pipe;
@@ -120,10 +122,11 @@ protected:
 
   void _ReceiveFlits( );
   void _ReceiveCredits( );
-
+virtual bool is4free();
   virtual void _InputQueuing( );
   virtual void _Route( );
-  virtual void _Alloc( ) = 0;
+  virtual void _Alloc( )=0 ;
+  void _BlessWrite();
   virtual void _OutputQueuing( );
 
   void _SendFlits( );
@@ -139,12 +142,19 @@ public:
   BufferMonitor bufferMonitor ;
   
 public:
+
+
+
   IQRouterBase( const Configuration& config,
 	    Module *parent, const string & name, int id,
 	    int inputs, int outputs );
-  
+
+
   virtual ~IQRouterBase( );
-  
+
+  virtual void BufferReinject(); //For MinBD
+  virtual void Redirect();
+  virtual void Eject();
   virtual void ReadInputs( );
   virtual void InternalStep( );
   virtual void WriteOutputs( );

@@ -93,10 +93,14 @@ public:
 
   virtual double Capacity( ) const;
 
+  virtual void BufferReinject(); //For MinBD
+  virtual void Redirect();
+  virtual void Eject();
   virtual void ReadInputs( );
   virtual void InternalStep( );
   virtual void WriteOutputs( );
-
+  void BlessWrite();
+  void SetField();
   void Display( ) const;
 
   int NumChannels(){return _channels;}

@@ -45,6 +45,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <iostream>
 #include <assert.h>
 #include "router.hpp"
+#include "fault.hpp"
 
 //////////////////Sub router types//////////////////////
 #include "iq_router_baseline.hpp"
@@ -68,26 +69,76 @@ Router::Router( const Configuration& config,
   _credit_delay     = config.GetInt( "credit_delay" );
   _input_speedup    = config.GetInt( "input_speedup" );
   _output_speedup   = config.GetInt( "output_speedup" );
-
-  _input_channels = new vector<FlitChannel *>;
+  field.x=31;//15; //initializing port usage to one=>free;
+ 
+ //_input_channels = new vector<FlitChannel *>;
+ // _input_channels.resize(5);
   _input_credits  = new vector<CreditChannel *>;
 
   _output_channels = new vector<FlitChannel *>;
   _output_credits  = new vector<CreditChannel *>;
+//core_buff= new queue<Flit *>;
+  //_channel_faults  = new vector<bool>;
 
-  _channel_faults  = new vector<bool>;
+  //added shankar
+/*unsigned int gK;                         para comment by INFD
+  gK=config.GetInt("k");
+  int y=id/gK;
+  int x=id%gK;
+  bool yedge, xedge;
 
- 
+  if(y==0)
+  {
+	  field.x=field.x&23;//7;
+  }
+  if(y==(gK-1))
+  {
+	  field.x=field.x&27;//11;
+  }
+
+  if(x==0)
+  {
+	  field.x=field.x&29;//13;
+  }
+  if(x==(gK-1))
+  {
+	  field.x=field.x&30;//14;
+  }
+  */
+  field.x=field.x&GetRouterFault(id);  //Added by INFD
+  use_const=field.x;
+  const_use.x=0;
+  const_use.x=field.x&15;
+  string bless;
+//cout<<"\nrouter id"<<id<<"\t value"<<use_const;
+//getchar();
+   config.GetStr("bless",bless);
+   c_threshold = config.GetInt("C_threshold");
+   reinject_flag=0;
+   redirect_flag = 0;
+   eject_flag = 0;
+   string Mod_MinBD;
+   config.GetStr("Mod_MinBD",Mod_MinBD);
+   if(Mod_MinBD=="true")
+ 	  _Mod_MinBD=true;
+   else
+ 	  _Mod_MinBD=false;
+
+ //  cout<<_Mod_MinBD;
+  if(bless=="true")
+ 	  _bless=true;
+   else
+ 	  _bless=false;
 
 }
 
 Router::~Router( )
 {
-  delete _input_channels;
+ // delete _input_channels;
   delete _input_credits;
   delete _output_channels;
   delete _output_credits;
-  delete _channel_faults;
+ // delete _channel_faults;
 }
 
 Credit *Router::_NewCredit( int vcs )
@@ -103,18 +154,33 @@ void Router::_RetireCredit( Credit *c )
   delete c;
 }
 
+void Router::make_emptyvc()	//MinBD
+{
+for ( int i=0; i<5; i++ )
+nonempty_vc[i] = false;
+}
+
 void Router::AddInputChannel( FlitChannel *channel, CreditChannel *backchannel )
 {
-  _input_channels->push_back( channel );
+  _input_channels.push_back( channel );
   _input_credits->push_back( backchannel );
   channel->SetSink( this ) ;
+}
+bool Router::isOneFree()
+{
+	for(i=0;i<_input_channels.size();i++)
+	{
+		if((_input_channels[i])->IsEmpty())
+			return true;
+	}
+	return false;
 }
 
 void Router::AddOutputChannel( FlitChannel *channel, CreditChannel *backchannel )
 {
   _output_channels->push_back( channel );
   _output_credits->push_back( backchannel );
-  _channel_faults->push_back( false );
+  _channel_faults.push_back( false );
   channel->SetSource( this ) ;
 }
 
@@ -126,16 +192,16 @@ int Router::GetID( ) const
 
 void Router::OutChannelFault( int c, bool fault )
 {
-  assert( ( c >= 0 ) && ( (unsigned int)c < _channel_faults->size( ) ) );
+  assert( ( c >= 0 ) && ( (unsigned int)c < _channel_faults.size( ) ) );
 
-  (*_channel_faults)[c] = fault;
+  (_channel_faults)[c] = fault;
 }
 
 bool Router::IsFaultyOutput( int c ) const
 {
-  assert( ( c >= 0 ) && ( (unsigned int)c < _channel_faults->size( ) ) );
+  assert( ( c >= 0 ) && ( (unsigned int)c < _channel_faults.size( ) ) );
 
-  return (*_channel_faults)[c];
+  return (_channel_faults)[c];
 }
 
 /*Router constructor*/
@@ -150,21 +216,35 @@ Router *Router::NewRouter( const Configuration& config,
   config.GetStr( "router", type );
   config.GetStr( "topology", topo);
 
-  if ( type == "iq" ) {
-    if(topo == "MECS"){
+  if ( type == "iq" )
+  {
+    if(topo == "MECS")
+    {
       r = new MECSRouter( config, parent, name, id, inputs, outputs);
-    } else {
+    }
+    else
+    {
       r = new IQRouterBaseline( config, parent, name, id, inputs, outputs );
     }
-  } else if ( type == "iq_combined" ) {
+  }
+  else if ( type == "iq_combined" )
+  {
     r = new IQRouterCombined( config, parent, name, id, inputs, outputs );
-  } else if ( type == "iq_split" ) {
+  }
+  else if ( type == "iq_split" )
+  {
     r = new IQRouterSplit( config, parent, name, id, inputs, outputs );
-  } else if ( type == "event" ) {
+  }
+  else if ( type == "event" )
+  {
     r = new EventRouter( config, parent, name, id, inputs, outputs );
-  } else if ( type == "chaos" ) {
+  }
+  else if ( type == "chaos" )
+  {
     r = new ChaosRouter( config, parent, name, id, inputs, outputs );
-  } else {
+  }
+  else
+  {
     cout << "Unknown router type " << type << endl;
   }
   /*For additional router, add another else if statement*/

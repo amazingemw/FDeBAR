@@ -43,7 +43,7 @@ protected:
 
 public:
   MECSChannels(Module* parent, string name, int source, int direction, int stops);
-  
+
   int GetSize(){return drop_count;}
   MECSForwarder* GetForwarder(int i){ assert(i<drop_count);return drops[i];}
   void AddChannel(FlitChannel* chan, int drop);

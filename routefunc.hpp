@@ -35,13 +35,16 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "router.hpp"
 #include "outputset.hpp"
 #include "config_utils.hpp"
-
+class order;
 typedef void (*tRoutingFunction)( const Router *, const Flit *, int in_channel, OutputSet *, bool );
-
+typedef void (*bRoutingFunction)( Router *, priority_queue<order>* flit_order);//added shankar
 void InitializeRoutingMap( );
 int fattree_transformation(int dest);
-tRoutingFunction GetRoutingFunction( const Configuration& config );
-
+void * GetRoutingFunction( const Configuration& config );
+extern int deflections;
+extern int two_dist;
+//bRoutingFunction GetRoutingFunction( const Configuration& config );//added shankar
+extern map<string, bRoutingFunction> bRoutingFunctionMap; //added shankar
 extern map<string, tRoutingFunction> gRoutingFunctionMap;
 extern int gNumVCS;
 extern int gReadReqBeginVC, gReadReqEndVC;
@@ -49,5 +52,6 @@ extern int gWriteReqBeginVC, gWriteReqEndVC;
 extern int gReadReplyBeginVC, gReadReplyEndVC;
 extern int gWriteReplyBeginVC, gWriteReplyEndVC;
 extern int memo_log2gC ;
-
+extern bool _out_alloc[5];
+extern bool _out_pri[5];
 #endif

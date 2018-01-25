@@ -1,0 +1,5415 @@
+Overall average latency = uniform
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.05
+OVERRIDE Parameter: injection_rate=0.05
+param44 F  injection_rate = 0.05
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 26.5722
+Maximum latency = 2447
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  383
+Total no of flits: 3170
+Total no of ejected flits: 3130
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 31.1432
+Maximum latency = 4338
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.146774
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  850
+Total no of flits: 6342
+Total no of ejected flits: 6305
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 32.705
+Maximum latency = 6234
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0477542
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  1281
+Total no of flits: 9542
+Total no of ejected flits: 9499
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 33.5605
+Maximum latency = 9459
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.025492
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  1858
+Total no of flits: 12822
+Total no of ejected flits: 12775
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 35.0658
+Maximum latency = 9459
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0429262
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  2384
+Total no of flits: 16012
+Total no of ejected flits: 15975
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 35.6155
+Maximum latency = 9639
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0154354
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  7292
+Total no of flits: 48037
+Total no of ejected flits: 47991
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 35.6155
+====>> No of deflection in measurment phase: 4908
+====>> No of flits injected in measurment phase: 32025
+====>> No of flits ejected in measurment phase: 32016
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.1
+OVERRIDE Parameter: injection_rate=0.1
+param44 F  injection_rate = 0.1
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 25.1705
+Maximum latency = 2031
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  1092
+Total no of flits: 6280
+Total no of ejected flits: 6210
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 25.6797
+Maximum latency = 2187
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0198278
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  2203
+Total no of flits: 12680
+Total no of ejected flits: 12632
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 26.178
+Maximum latency = 2532
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0190341
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  3438
+Total no of flits: 18960
+Total no of ejected flits: 18907
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 26.1302
+Maximum latency = 2985
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00182874
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  4468
+Total no of flits: 25384
+Total no of ejected flits: 25332
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 26.0502
+Maximum latency = 2985
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00306978
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  5559
+Total no of flits: 31740
+Total no of ejected flits: 31679
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 25.6699
+Maximum latency = 3915
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0148178
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  16708
+Total no of flits: 95758
+Total no of ejected flits: 95699
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 25.6699
+====>> No of deflection in measurment phase: 11149
+====>> No of flits injected in measurment phase: 64018
+====>> No of flits ejected in measurment phase: 64020
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.15
+OVERRIDE Parameter: injection_rate=0.15
+param44 F  injection_rate = 0.15
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 22.3708
+Maximum latency = 1146
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  1886
+Total no of flits: 9461
+Total no of ejected flits: 9372
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 22.8793
+Maximum latency = 1602
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0222259
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  4037
+Total no of flits: 19092
+Total no of ejected flits: 19014
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 23.1902
+Maximum latency = 1602
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0134075
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  6140
+Total no of flits: 28580
+Total no of ejected flits: 28514
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 23.1222
+Maximum latency = 1602
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00294316
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  8230
+Total no of flits: 38303
+Total no of ejected flits: 38209
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 23.0994
+Maximum latency = 1602
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000987203
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  10369
+Total no of flits: 47894
+Total no of ejected flits: 47823
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 23.359
+Maximum latency = 1939
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.011113
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  31766
+Total no of flits: 143784
+Total no of ejected flits: 143711
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 23.359
+====>> No of deflection in measurment phase: 21397
+====>> No of flits injected in measurment phase: 95890
+====>> No of flits ejected in measurment phase: 95888
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.2
+OVERRIDE Parameter: injection_rate=0.2
+param44 F  injection_rate = 0.2
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 22.7343
+Maximum latency = 1005
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  3754
+Total no of flits: 12614
+Total no of ejected flits: 12512
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 22.6671
+Maximum latency = 1005
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00296322
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  7587
+Total no of flits: 25441
+Total no of ejected flits: 25343
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 22.7712
+Maximum latency = 1005
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0045734
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  11419
+Total no of flits: 38110
+Total no of ejected flits: 38025
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 22.885
+Maximum latency = 1005
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00497289
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  15444
+Total no of flits: 50981
+Total no of ejected flits: 50876
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 22.9973
+Maximum latency = 1005
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00488029
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  19530
+Total no of flits: 63770
+Total no of ejected flits: 63679
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 22.7069
+Maximum latency = 1611
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0127856
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  57048
+Total no of flits: 191586
+Total no of ejected flits: 191498
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 22.7069
+====>> No of deflection in measurment phase: 37518
+====>> No of flits injected in measurment phase: 127816
+====>> No of flits ejected in measurment phase: 127819
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.25
+OVERRIDE Parameter: injection_rate=0.25
+param44 F  injection_rate = 0.25
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 23.3397
+Maximum latency = 459
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  6526
+Total no of flits: 15904
+Total no of ejected flits: 15767
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 23.466
+Maximum latency = 552
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00538399
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  13386
+Total no of flits: 31920
+Total no of ejected flits: 31800
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 23.467
+Maximum latency = 552
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 4.3078e-05
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  19923
+Total no of flits: 47756
+Total no of ejected flits: 47646
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 23.4173
+Maximum latency = 552
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0021229
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  26562
+Total no of flits: 63760
+Total no of ejected flits: 63613
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 23.5163
+Maximum latency = 552
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00420639
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  33645
+Total no of flits: 79699
+Total no of ejected flits: 79577
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 23.6107
+Maximum latency = 842
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00400156
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  101993
+Total no of flits: 239589
+Total no of ejected flits: 239470
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 23.6107
+====>> No of deflection in measurment phase: 68348
+====>> No of flits injected in measurment phase: 159890
+====>> No of flits ejected in measurment phase: 159893
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.3
+OVERRIDE Parameter: injection_rate=0.3
+param44 F  injection_rate = 0.3
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 26.2087
+Maximum latency = 318
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  12522
+Total no of flits: 19075
+Total no of ejected flits: 18880
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 26.5575
+Maximum latency = 601
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0131323
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  25725
+Total no of flits: 38236
+Total no of ejected flits: 38052
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 26.8814
+Maximum latency = 601
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0120486
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  39313
+Total no of flits: 57376
+Total no of ejected flits: 57210
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 27.0353
+Maximum latency = 601
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00569412
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  53078
+Total no of flits: 76502
+Total no of ejected flits: 76288
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 27.0351
+Maximum latency = 601
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 7.10408e-06
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  66197
+Total no of flits: 95592
+Total no of ejected flits: 95433
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 27.3452
+Maximum latency = 571
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.011338
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  203082
+Total no of flits: 287417
+Total no of ejected flits: 287259
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 27.3452
+====>> No of deflection in measurment phase: 136885
+====>> No of flits injected in measurment phase: 191825
+====>> No of flits ejected in measurment phase: 191826
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.31
+OVERRIDE Parameter: injection_rate=0.31
+param44 F  injection_rate = 0.31
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 29.1567
+Maximum latency = 333
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  15321
+Total no of flits: 19665
+Total no of ejected flits: 19460
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 29.4417
+Maximum latency = 344
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00967953
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  31910
+Total no of flits: 39451
+Total no of ejected flits: 39263
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 29.2316
+Maximum latency = 498
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00718856
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  47167
+Total no of flits: 59243
+Total no of ejected flits: 59055
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 29.3009
+Maximum latency = 498
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00236491
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  63286
+Total no of flits: 78998
+Total no of ejected flits: 78777
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 29.5624
+Maximum latency = 511
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00884494
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  79767
+Total no of flits: 98787
+Total no of ejected flits: 98618
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 31.5769
+Maximum latency = 494
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0637988
+throughput change = 0
+completed one running phase
+flag converged == 0
+
+Total no of deflections:  246710
+Total no of flits: 296942
+Total no of ejected flits: 296760
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 31.5769
+====>> No of deflection in measurment phase: 166943
+====>> No of flits injected in measurment phase: 198155
+====>> No of flits ejected in measurment phase: 198142
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=uniform
+OVERRIDE Parameter: traffic=uniform
+param43 S traffic = uniform
+Configuration file : injection_rate=0.32
+OVERRIDE Parameter: injection_rate=0.32
+param44 F  injection_rate = 0.32
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 3
+Average latency = 34.7376
+Maximum latency = 331
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  18249
+Total no of flits: 20132
+Total no of ejected flits: 19920
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 3
+Average latency = 39.393
+Maximum latency = 400
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.118178
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  38828
+Total no of flits: 40432
+Total no of ejected flits: 40220
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 3
+Average latency = 42.9918
+Maximum latency = 487
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0837109
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  59501
+Total no of flits: 60696
+Total no of ejected flits: 60477
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 3
+Average latency = 45.44
+Maximum latency = 615
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0538767
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  78704
+Total no of flits: 80998
+Total no of ejected flits: 80767
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 3
+Average latency = 48.3601
+Maximum latency = 785
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0603819
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  97918
+Total no of flits: 101276
+Total no of ejected flits: 101058
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 3
+Average latency = 106.542
+Maximum latency = 3029
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.546094
+throughput change = 0
+completed one running phase
+flag converged == 0
+
+Total no of deflections:  302206
+Total no of flits: 303580
+Total no of ejected flits: 303375
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 106.542
+====>> No of deflection in measurment phase: 204288
+====>> No of flits injected in measurment phase: 202304
+====>> No of flits ejected in measurment phase: 202317
+
+
+END
+Overall average latency = transpose
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=transpose
+OVERRIDE Parameter: traffic=transpose
+param43 S traffic = transpose
+Configuration file : injection_rate=0.05
+OVERRIDE Parameter: injection_rate=0.05
+param44 F  injection_rate = 0.05
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 17.9141
+Maximum latency = 1449
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  382
+Total no of flits: 3170
+Total no of ejected flits: 3144
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 18.1558
+Maximum latency = 4098
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0133097
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  783
+Total no of flits: 6342
+Total no of ejected flits: 6317
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 19.4799
+Maximum latency = 8946
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0679755
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  1197
+Total no of flits: 9542
+Total no of ejected flits: 9516
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 19.1051
+Maximum latency = 8946
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0196216
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  1619
+Total no of flits: 12822
+Total no of ejected flits: 12793
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 18.7138
+Maximum latency = 8946
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0209097
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  2012
+Total no of flits: 16012
+Total no of ejected flits: 15990
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 18.0624
+Maximum latency = 19803
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0360609
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  6087
+Total no of flits: 48037
+Total no of ejected flits: 48007
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 18.0624
+====>> No of deflection in measurment phase: 4075
+====>> No of flits injected in measurment phase: 32025
+====>> No of flits ejected in measurment phase: 32017
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=transpose
+OVERRIDE Parameter: traffic=transpose
+param43 S traffic = transpose
+Configuration file : injection_rate=0.07
+OVERRIDE Parameter: injection_rate=0.07
+param44 F  injection_rate = 0.07
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 18.0674
+Maximum latency = 1773
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  601
+Total no of flits: 4386
+Total no of ejected flits: 4348
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 19.4132
+Maximum latency = 5211
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0693254
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  1210
+Total no of flits: 8823
+Total no of ejected flits: 8792
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 19.4666
+Maximum latency = 5211
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00274366
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  1841
+Total no of flits: 13297
+Total no of ejected flits: 13259
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 19.894
+Maximum latency = 6423
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0214804
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  2485
+Total no of flits: 17798
+Total no of ejected flits: 17757
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 19.849
+Maximum latency = 6423
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00226721
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  3083
+Total no of flits: 22246
+Total no of ejected flits: 22212
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 19.8353
+Maximum latency = 13158
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000690334
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  9220
+Total no of flits: 67032
+Total no of ejected flits: 66996
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 19.8353
+====>> No of deflection in measurment phase: 6137
+====>> No of flits injected in measurment phase: 44786
+====>> No of flits ejected in measurment phase: 44784
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=transpose
+OVERRIDE Parameter: traffic=transpose
+param43 S traffic = transpose
+Configuration file : injection_rate=0.1
+OVERRIDE Parameter: injection_rate=0.1
+param44 F  injection_rate = 0.1
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 20.2084
+Maximum latency = 1881
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  1064
+Total no of flits: 6280
+Total no of ejected flits: 6228
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 20.566
+Maximum latency = 3393
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0173857
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  2114
+Total no of flits: 12680
+Total no of ejected flits: 12635
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 20.8216
+Maximum latency = 3786
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0122776
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  3207
+Total no of flits: 18960
+Total no of ejected flits: 18919
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 20.7241
+Maximum latency = 3786
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00470572
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  4444
+Total no of flits: 25384
+Total no of ejected flits: 25334
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 20.8369
+Maximum latency = 3888
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00541328
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  5536
+Total no of flits: 31740
+Total no of ejected flits: 31701
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 20.6943
+Maximum latency = 6471
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0068902
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  16584
+Total no of flits: 95758
+Total no of ejected flits: 95710
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 20.6943
+====>> No of deflection in measurment phase: 11048
+====>> No of flits injected in measurment phase: 64018
+====>> No of flits ejected in measurment phase: 64009
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=transpose
+OVERRIDE Parameter: traffic=transpose
+param43 S traffic = transpose
+Configuration file : injection_rate=0.12
+OVERRIDE Parameter: injection_rate=0.12
+param44 F  injection_rate = 0.12
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 20.8669
+Maximum latency = 1380
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  1718
+Total no of flits: 7556
+Total no of ejected flits: 7499
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 21.2565
+Maximum latency = 2934
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0183299
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  3517
+Total no of flits: 15249
+Total no of ejected flits: 15198
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 21.3759
+Maximum latency = 2934
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00558534
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  5269
+Total no of flits: 22817
+Total no of ejected flits: 22767
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 21.3419
+Maximum latency = 2934
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00159401
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  7160
+Total no of flits: 30539
+Total no of ejected flits: 30475
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 21.3496
+Maximum latency = 2934
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000358761
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  8948
+Total no of flits: 38175
+Total no of ejected flits: 38123
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 21.3134
+Maximum latency = 7737
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0016985
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  27048
+Total no of flits: 114892
+Total no of ejected flits: 114830
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 21.3134
+====>> No of deflection in measurment phase: 18100
+====>> No of flits injected in measurment phase: 76717
+====>> No of flits ejected in measurment phase: 76707
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=transpose
+OVERRIDE Parameter: traffic=transpose
+param43 S traffic = transpose
+Configuration file : injection_rate=0.13
+OVERRIDE Parameter: injection_rate=0.13
+param44 F  injection_rate = 0.13
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 21.4175
+Maximum latency = 987
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  2337
+Total no of flits: 8205
+Total no of ejected flits: 8138
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 21.7248
+Maximum latency = 1395
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0141447
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  4904
+Total no of flits: 16576
+Total no of ejected flits: 16514
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 21.6476
+Maximum latency = 2253
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00356823
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  7184
+Total no of flits: 24802
+Total no of ejected flits: 24750
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 21.8463
+Maximum latency = 2253
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00909429
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  9890
+Total no of flits: 33160
+Total no of ejected flits: 33091
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 21.8346
+Maximum latency = 2253
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000535411
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  12253
+Total no of flits: 41441
+Total no of ejected flits: 41380
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 21.9874
+Maximum latency = 8442
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00695054
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  37011
+Total no of flits: 124645
+Total no of ejected flits: 124578
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 21.9874
+====>> No of deflection in measurment phase: 24758
+====>> No of flits injected in measurment phase: 83204
+====>> No of flits ejected in measurment phase: 83198
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=transpose
+OVERRIDE Parameter: traffic=transpose
+param43 S traffic = transpose
+Configuration file : injection_rate=0.14
+OVERRIDE Parameter: injection_rate=0.14
+param44 F  injection_rate = 0.14
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 22.4424
+Maximum latency = 874
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  3362
+Total no of flits: 8840
+Total no of ejected flits: 8770
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 22.831
+Maximum latency = 1005
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0170204
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  6996
+Total no of flits: 17856
+Total no of ejected flits: 17788
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 22.7858
+Maximum latency = 1422
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00198565
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  10402
+Total no of flits: 26708
+Total no of ejected flits: 26653
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 22.8811
+Maximum latency = 1422
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00416655
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  14308
+Total no of flits: 35767
+Total no of ejected flits: 35694
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 22.8216
+Maximum latency = 2319
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00260738
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  17656
+Total no of flits: 44671
+Total no of ejected flits: 44601
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 22.694
+Maximum latency = 4634
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00562427
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  51233
+Total no of flits: 134233
+Total no of ejected flits: 134160
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 22.694
+====>> No of deflection in measurment phase: 33577
+====>> No of flits injected in measurment phase: 89562
+====>> No of flits ejected in measurment phase: 89559
+
+
+END
+Overall average latency = bitcomp
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.05
+OVERRIDE Parameter: injection_rate=0.05
+param44 F  injection_rate = 0.05
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 24.6719
+Maximum latency = 1119
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  25
+Total no of flits: 3170
+Total no of ejected flits: 3142
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 24.6182
+Maximum latency = 1119
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00218192
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  43
+Total no of flits: 6342
+Total no of ejected flits: 6314
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 24.7038
+Maximum latency = 1119
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00346853
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  64
+Total no of flits: 9542
+Total no of ejected flits: 9515
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 24.6763
+Maximum latency = 1119
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0011155
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  83
+Total no of flits: 12822
+Total no of ejected flits: 12790
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 24.6555
+Maximum latency = 1119
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000843481
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  94
+Total no of flits: 16012
+Total no of ejected flits: 15989
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 24.5389
+Maximum latency = 57
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00475339
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  259
+Total no of flits: 48037
+Total no of ejected flits: 48003
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 24.5389
+====>> No of deflection in measurment phase: 165
+====>> No of flits injected in measurment phase: 32025
+====>> No of flits ejected in measurment phase: 32014
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.1
+OVERRIDE Parameter: injection_rate=0.1
+param44 F  injection_rate = 0.1
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 25.3881
+Maximum latency = 138
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  198
+Total no of flits: 6280
+Total no of ejected flits: 6218
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 25.496
+Maximum latency = 138
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00423489
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  402
+Total no of flits: 12680
+Total no of ejected flits: 12626
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 25.6135
+Maximum latency = 250
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00458747
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  643
+Total no of flits: 18960
+Total no of ejected flits: 18905
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 25.6428
+Maximum latency = 250
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00114202
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  905
+Total no of flits: 25384
+Total no of ejected flits: 25321
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 25.6148
+Maximum latency = 250
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00109225
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  1117
+Total no of flits: 31740
+Total no of ejected flits: 31694
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 25.5689
+Maximum latency = 422
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00179615
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  3469
+Total no of flits: 95758
+Total no of ejected flits: 95703
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 25.5689
+====>> No of deflection in measurment phase: 2352
+====>> No of flits injected in measurment phase: 64018
+====>> No of flits ejected in measurment phase: 64009
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.12
+OVERRIDE Parameter: injection_rate=0.12
+param44 F  injection_rate = 0.12
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 25.9142
+Maximum latency = 75
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  413
+Total no of flits: 7556
+Total no of ejected flits: 7485
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 26.0862
+Maximum latency = 75
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00659278
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  892
+Total no of flits: 15249
+Total no of ejected flits: 15184
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 26.1623
+Maximum latency = 150
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.002909
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  1353
+Total no of flits: 22817
+Total no of ejected flits: 22752
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 26.2023
+Maximum latency = 150
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00152592
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  1800
+Total no of flits: 30539
+Total no of ejected flits: 30460
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 26.1907
+Maximum latency = 150
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000443793
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  2294
+Total no of flits: 38175
+Total no of ejected flits: 38112
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 26.2206
+Maximum latency = 187
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00114311
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  7301
+Total no of flits: 114892
+Total no of ejected flits: 114822
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 26.2206
+====>> No of deflection in measurment phase: 5007
+====>> No of flits injected in measurment phase: 76717
+====>> No of flits ejected in measurment phase: 76710
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.14
+OVERRIDE Parameter: injection_rate=0.14
+param44 F  injection_rate = 0.14
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 26.7306
+Maximum latency = 105
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  818
+Total no of flits: 8840
+Total no of ejected flits: 8754
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 27.0378
+Maximum latency = 105
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0113587
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  1918
+Total no of flits: 17856
+Total no of ejected flits: 17774
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 27.0406
+Maximum latency = 122
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00010636
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  2781
+Total no of flits: 26708
+Total no of ejected flits: 26632
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 27.1075
+Maximum latency = 208
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00246539
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  3777
+Total no of flits: 35768
+Total no of ejected flits: 35679
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 27.1063
+Maximum latency = 208
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 4.38373e-05
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  4712
+Total no of flits: 44671
+Total no of ejected flits: 44594
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 27.1446
+Maximum latency = 209
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00141121
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  14869
+Total no of flits: 134233
+Total no of ejected flits: 134154
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 27.1446
+====>> No of deflection in measurment phase: 10157
+====>> No of flits injected in measurment phase: 89562
+====>> No of flits ejected in measurment phase: 89560
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.16
+OVERRIDE Parameter: injection_rate=0.16
+param44 F  injection_rate = 0.16
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 27.9006
+Maximum latency = 122
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  1637
+Total no of flits: 10101
+Total no of ejected flits: 9990
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 28.2703
+Maximum latency = 124
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0130779
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  3618
+Total no of flits: 20360
+Total no of ejected flits: 20265
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 28.244
+Maximum latency = 124
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000931604
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  5311
+Total no of flits: 30453
+Total no of ejected flits: 30364
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 28.3318
+Maximum latency = 141
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0030971
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  7259
+Total no of flits: 40804
+Total no of ejected flits: 40693
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 28.3533
+Maximum latency = 141
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00076148
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  9200
+Total no of flits: 51052
+Total no of ejected flits: 50959
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 28.3793
+Maximum latency = 159
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000913242
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  28003
+Total no of flits: 153225
+Total no of ejected flits: 153136
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 28.3793
+====>> No of deflection in measurment phase: 18803
+====>> No of flits injected in measurment phase: 102173
+====>> No of flits ejected in measurment phase: 102177
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.18
+OVERRIDE Parameter: injection_rate=0.18
+param44 F  injection_rate = 0.18
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 29.7391
+Maximum latency = 157
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  3091
+Total no of flits: 11360
+Total no of ejected flits: 11227
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 30.1204
+Maximum latency = 296
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.012658
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  6551
+Total no of flits: 22900
+Total no of ejected flits: 22787
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 30.1476
+Maximum latency = 327
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000904276
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  9776
+Total no of flits: 34261
+Total no of ejected flits: 34158
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 30.2667
+Maximum latency = 327
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00393312
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  13403
+Total no of flits: 45853
+Total no of ejected flits: 45729
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 30.2698
+Maximum latency = 327
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000104178
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  16876
+Total no of flits: 57373
+Total no of ejected flits: 57265
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 30.4407
+Maximum latency = 614
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00561311
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  52529
+Total no of flits: 172297
+Total no of ejected flits: 172190
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 30.4407
+====>> No of deflection in measurment phase: 35653
+====>> No of flits injected in measurment phase: 114924
+====>> No of flits ejected in measurment phase: 114925
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.2
+OVERRIDE Parameter: injection_rate=0.2
+param44 F  injection_rate = 0.2
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 34.3007
+Maximum latency = 154
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  6886
+Total no of flits: 12592
+Total no of ejected flits: 12436
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 36.2651
+Maximum latency = 281
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0541702
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  16197
+Total no of flits: 25372
+Total no of ejected flits: 25216
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 36.2675
+Maximum latency = 281
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 6.50424e-05
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  24056
+Total no of flits: 38088
+Total no of ejected flits: 37954
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 37.002
+Maximum latency = 281
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0198513
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  33711
+Total no of flits: 50955
+Total no of ejected flits: 50791
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 36.9682
+Maximum latency = 302
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.000916741
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  42305
+Total no of flits: 63740
+Total no of ejected flits: 63594
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 6
+Average latency = 37.0766
+Maximum latency = 1224
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.00292499
+throughput change = 0
+completed one running phase
+flag converged == 1
+
+Total no of deflections:  128306
+Total no of flits: 191575
+Total no of ejected flits: 191437
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 37.0766
+====>> No of deflection in measurment phase: 86001
+====>> No of flits injected in measurment phase: 127835
+====>> No of flits ejected in measurment phase: 127843
+
+
+END
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 8
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  side_buffersize = 3
+param27 I  num_vcs = 1
+param28 I  vc_buf_size = 1
+param29 S bless = true
+param30 I  wait_for_tail_credit = 1
+param31 S vc_allocator = select
+param32 S sw_allocator = select
+param33 I  alloc_iters = 1
+param34 I  routing_delay = 0
+param35 I  input_speedup = 1
+param36 I  output_speedup = 1
+param37 F  internal_speedup = 1
+param38 S traffic = uniform
+param39 I  const_flits_per_packet = 1
+param40 I  sim_time = 10000
+param41 S sim_type = latency
+param42 F  injection_rate = 0.3
+END Configuration File: examples/meshbless2
+Configuration file : traffic=bitcomp
+OVERRIDE Parameter: traffic=bitcomp
+param43 S traffic = bitcomp
+Configuration file : injection_rate=0.21
+OVERRIDE Parameter: injection_rate=0.21
+param44 F  injection_rate = 0.21
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 8 &  n= 2, Total# nodes =64,  Total # channels =256
+
+router id0	 value21
+router id1	 value23
+router id2	 value23
+router id3	 value23
+router id4	 value23
+router id5	 value23
+router id6	 value23
+router id7	 value22
+router id8	 value29
+router id9	 value31
+router id10	 value31
+router id11	 value31
+router id12	 value31
+router id13	 value31
+router id14	 value31
+router id15	 value30
+router id16	 value29
+router id17	 value31
+router id18	 value31
+router id19	 value31
+router id20	 value31
+router id21	 value31
+router id22	 value31
+router id23	 value30
+router id24	 value29
+router id25	 value31
+router id26	 value31
+router id27	 value31
+router id28	 value31
+router id29	 value31
+router id30	 value31
+router id31	 value30
+router id32	 value29
+router id33	 value31
+router id34	 value31
+router id35	 value31
+router id36	 value31
+router id37	 value31
+router id38	 value31
+router id39	 value30
+router id40	 value29
+router id41	 value31
+router id42	 value31
+router id43	 value31
+router id44	 value31
+router id45	 value31
+router id46	 value31
+router id47	 value30
+router id48	 value29
+router id49	 value31
+router id50	 value31
+router id51	 value31
+router id52	 value31
+router id53	 value31
+router id54	 value31
+router id55	 value30
+router id56	 value25
+router id57	 value27
+router id58	 value27
+router id59	 value27
+router id60	 value27
+router id61	 value27
+router id62	 value27
+router id63	 value26......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+classes ==1
+_warmup_periods =5
+_sample_period =1000
+_max_samples= 10
+_sim_time= 10000
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :0
+Minimum latency = 6
+Average latency = 41.4317
+Maximum latency = 307
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+
+Total no of deflections:  10456
+Total no of flits: 13113
+Total no of ejected flits: 12925
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :1
+Minimum latency = 6
+Average latency = 48.4712
+Maximum latency = 523
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.14523
+throughput change = 0
+completed warm up phase: 1
+
+Total no of deflections:  25501
+Total no of flits: 26293
+Total no of ejected flits: 26093
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :2
+Minimum latency = 6
+Average latency = 55.3128
+Maximum latency = 760
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.12369
+throughput change = 0
+completed warm up phase: 2
+
+Total no of deflections:  39606
+Total no of flits: 39513
+Total no of ejected flits: 39313
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :3
+Minimum latency = 6
+Average latency = 61.044
+Maximum latency = 1082
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0938865
+throughput change = 0
+completed warm up phase: 3
+
+Total no of deflections:  53907
+Total no of flits: 52788
+Total no of ejected flits: 52593
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :4
+Minimum latency = 6
+Average latency = 66.1592
+Maximum latency = 1308
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.0773164
+throughput change = 0
+completed warm up phase: 4
+Warmed up ...Time used is 5000 cycles
+
+Total no of deflections:  66816
+Total no of flits: 65999
+Total no of ejected flits: 65818
+Iteration  4 over
+
+Update period: 10000
+Update max_samples: 6
+Time taken for warmup: 5000 cycles 
+
+==========================================================
+
+Now Measurment Stage will run for 10000 cycles
+
+==========================================================
+++++++++++++++++++++++++++++++++++++++
+simulation in Phase: Itertaion :5
+Minimum latency = 12
+Average latency = 157.026
+Maximum latency = 4934
+Average fragmentation = 0
+Accepted packets = 1 at node 148127024 (avg = 1)
+latency change    = 0.578674
+throughput change = 0
+completed one running phase
+flag converged == 0
+
+Total no of deflections:  220305
+Total no of flits: 197539
+Total no of ejected flits: 197335
+Iteration  5 over
+
+
+====>> Near deflections:0
+====>> The Average latency: 157.026
+====>> No of deflection in measurment phase: 153489
+====>> No of flits injected in measurment phase: 131540
+====>> No of flits ejected in measurment phase: 131517
+
+
+END

@@ -72,6 +72,21 @@ MECSRouter::MECSRouter(const Configuration& config,
   w_credit = new MECSCreditCombiner(this, name, 3, id);
 }
 
+bool MECSRouter:: is4free()
+{
+
+}
+void MECSRouter::_BlessWrite()
+{
+
+}
+void MECSRouter::BufferReinject() //For MinBD
+{
+
+}
+void MECSRouter::Redirect(){}
+void MECSRouter::Eject()
+{}
 
 MECSRouter::~MECSRouter(){
   delete n,e,s,w;
@@ -81,7 +96,7 @@ MECSRouter::~MECSRouter(){
 
 void MECSRouter::AddInputChannel( FlitChannel *channel, CreditChannel *backchannel)
 {
-  _input_channels->push_back( channel );
+  _input_channels.push_back( channel );
   _input_credits->push_back( backchannel );
 
   //need to properly set source and sink in the future
@@ -92,7 +107,7 @@ void MECSRouter::AddInputChannel( FlitChannel *channel, CreditChannel *backchann
 
 void MECSRouter::AddInputChannel( FlitChannel *channel, CreditChannel *backchannel , int dir)
 {
-  _input_channels->push_back( channel );
+  _input_channels.push_back( channel );
   _input_credits->push_back( backchannel );
 
  //need to properly set source and sink in the future
@@ -127,7 +142,7 @@ void MECSRouter::AddOutputChannel( FlitChannel *channel, CreditChannel *backchan
   _output_credits->push_back( backchannel );
   
   //need to properly set source and sink in the future
-  _channel_faults->push_back( false );
+  _channel_faults.push_back( false );
   if(channel)
     channel->SetSource( this ) ;
 }
@@ -280,10 +295,10 @@ void MECSRouter::WriteOutputs( ) {
 void MECSRouter::Finalize(){
   for( int i = 0; i<_inputs; i++){
     if(i<gK){
-      sub_router->AddInputChannel(_input_channels->at(i), _input_credits->at(i));
+      sub_router->AddInputChannel(_input_channels.at(i), _input_credits->at(i));
     } else {
 
-      sub_router->AddInputChannel(_input_channels->at(i), _output_credits->at(i));
+      sub_router->AddInputChannel(_input_channels.at(i), _output_credits->at(i));
     }
   }
 

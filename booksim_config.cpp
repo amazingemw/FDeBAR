@@ -33,12 +33,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *Contains all the configurable parameters in a network
  *
  */
-
+#include <iostream>  // added John
 
 #include "booksim.hpp"
 #include "booksim_config.hpp"
 
-BookSimConfig::BookSimConfig( )
+BookSimConfig::BookSimConfig( )            // initilaize all values. can be overwritten by parameter file (JOHN)
 { 
   //========================================================
   // Network options
@@ -46,6 +46,7 @@ BookSimConfig::BookSimConfig( )
 
   // Channel length listing file
   AddStrField( "channel_file", "" ) ;
+	
 
   // Use read/write request reply scheme
   
@@ -59,6 +60,7 @@ BookSimConfig::BookSimConfig( )
 
   _int_map["read_reply_begin_vc"] = 8;
   _int_map["read_reply_end_vc"] = 13;
+
 
   _int_map["write_reply_begin_vc"] = 10;
   _int_map["write_reply_end_vc"] = 15;
@@ -108,11 +110,15 @@ BookSimConfig::BookSimConfig( )
 
   //========================================================
   // Router options
+
+  _int_map["side_buffersize"] = 1; //kranthi
+  _int_map["C_threshold"] = 2;
   //========================================================
 
   //==== General options ===================================
 
   AddStrField( "router", "iq" ); 
+  AddStrField("Mod_MinBD", "true");
 
   _int_map["output_delay"] = 0;
   _int_map["credit_delay"] = 0;
@@ -126,7 +132,7 @@ BookSimConfig::BookSimConfig( )
   // what to use to inhibit speculative allocator grants?
   AddStrField("filter_spec_grants", "confl_nonspec_gnts");
 
-  _int_map["num_vcs"]         = 16;  
+  _int_map["num_vcs"]         = 0;  
   _int_map["vc_buf_size"]     = 8;  
 
   _int_map["wait_for_tail_credit"] = 0; // reallocate a VC before a tail credit?
@@ -156,6 +162,7 @@ BookSimConfig::BookSimConfig( )
   
   AddStrField( "vc_alloc_arb_type", "round_robin" );
   AddStrField( "sw_alloc_arb_type", "round_robin" );
+  AddStrField("bless","false");
   
   _int_map["alloc_iters"] = 1;
   
@@ -180,8 +187,8 @@ BookSimConfig::BookSimConfig( )
   _float_map["burst_alpha"] = 0.5; // burst interval
   _float_map["burst_beta"]  = 0.5; // burst length
 
-  AddStrField( "priority", "none" );  // message priorities
-
+  //AddStrField( "priority", "none" );  // message priorities
+  AddStrField( "priority", "age" );	//changed to age based from none shankar
   _int_map["batch_size"] = 1000;
   _int_map["batch_count"] = 1;
   _int_map["max_outstanding_requests"] = 4;
@@ -199,9 +206,11 @@ BookSimConfig::BookSimConfig( )
 
   AddStrField( "sim_type", "latency" );
 
-  _int_map["warmup_periods"] = 3; // number of samples periods to "warm-up" the simulation
+  _int_map["sim_time"]	= 1000; //number of cycles simulation to run
 
-  _int_map["sample_period"] = 1000; // how long between measurements
+  _int_map["warmup_periods"] = 10; // number of samples periods to "warm-up" the simulation
+
+  _int_map["sample_period"] = 1000; // how long between measurements changed from 1000 shankar
   _int_map["max_samples"]   = 10;   // maximum number of sample periods in a simulation
 
   _float_map["latency_thres"] = 500.0; // if avg. latency exceeds the threshold, assume unstable
@@ -213,7 +222,7 @@ BookSimConfig::BookSimConfig( )
 
   _int_map["sim_count"]     = 1;   // number of simulations to perform
 
-
+  
   _int_map["include_queuing"] =1; // non-zero includes source queuing latency
 
   //  _int_map["reorder"]         = 0;  // know what you're doing
@@ -223,21 +232,22 @@ BookSimConfig::BookSimConfig( )
 
   _int_map["seed"]            = 0; //random seed for simulation, e.g. traffic 
 
-  _int_map["print_activity"] = 0;
+  _int_map["print_activity"] = 0;  // if made to 1, shows the movements of flit port to port wise
+  	  	  	  	  	  	  	  	  //changed to 1 shankar
 
-  _int_map["print_csv_results"] = 0;
-  _int_map["print_vc_stats"] = 0;
+  _int_map["print_csv_results"] = 0; 
+  _int_map["print_vc_stats"] =0;  
 
   _int_map["drain_measured_only"] = 0;
 
-  _int_map["viewer_trace"] = 0;
+  _int_map["viewer_trace"] = 1;  
 
   AddStrField("watch_file", "");
   AddStrField("watch_out", "");
 
-  AddStrField("stats_out", "");
+  AddStrField("stats_out", "*");
   AddStrField("flow_out", "");
-  
+ 
   //==================Power model params=====================
   _int_map["sim_power"] = 0;
   AddStrField("power_output_file","pwr_tmp");
@@ -247,6 +257,7 @@ BookSimConfig::BookSimConfig( )
 
   //==================Network file===========================
   AddStrField("network_file","");
+ cout<<"Default values succesfully loaded"<<endl; // added John
 }
 
 
@@ -262,7 +273,7 @@ vector< pair<string, vector< string> > > *BookSimConfig::GetImportantMap(){
   (*important)[0].second.push_back("c");
   (*important)[0].second.push_back( "routing_function");
   (*important)[0].second.push_back("use_noc_latency");
-
+	
   important->push_back(make_pair("Router", vector<string>()));
   (*important)[1].second.push_back("router");
   (*important)[1].second.push_back("num_vcs");

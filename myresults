@@ -1,0 +1,574 @@
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/mesh44
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 3
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  num_vcs = 1
+param27 I  vc_buf_size = 1
+param28 S bless = true
+param29 I  wait_for_tail_credit = 1
+param30 S vc_allocator = select
+param31 S sw_allocator = select
+param32 I  alloc_iters = 1
+param33 I  credit_delay = 1
+param34 I  routing_delay = 1
+param35 I  vc_alloc_delay = 1
+param36 I  input_speedup = 1
+param37 I  output_speedup = 1
+param38 F  internal_speedup = 1
+param39 S traffic = uniform
+param40 I  const_flits_per_packet = 1
+param41 S sim_type = latency
+param42 F  injection_rate = 0.18
+END Configuration File: examples/mesh44
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 3 &  n= 2, Total# nodes =9,  Total # channels =36
+......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+
+no of calls to single sim   ********************************************************* 1
+classes ==1
+_warmup_periods =3
+_sample_period =10
+_max_samples= 10
+++++++++++++++++++++++++++++++++++++++
+0
+simulation in Phase: Itertaion :0
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed warm up phase: 0
+Iteration  0 over
+++++++++++++++++++++++++++++++++++++++
+0
+simulation in Phase: Itertaion :1
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed warm up phase: 1
+Iteration  1 over
+++++++++++++++++++++++++++++++++++++++
+0
+simulation in Phase: Itertaion :2
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed warm up phase: 2
+Warmed up ...Time used is 30 cycles
+Iteration  2 over
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :3
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  3 over
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :4
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  4 over
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :5
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  5 over
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :6
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  6 over
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :7
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  7 over
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :8
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  8 over
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :9
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  9 over
+#@#@#@#@#  Entered Draining stage @#@#@#@#@#@
+flag converged == 1
+Draining all recorded packets ...
+pkts_out_stnd = 1
+Draining remaining packets ...
+Time taken is 101 cycles
+====== Traffic class 0 ======
+Overall minimum latency = 1.79769e+308 (1 samples)
+Overall average latency = -nan (1 samples)
+Overall maximum latency = 2.22507e-308 (1 samples)
+Overall minimum transaction latency = 1.79769e+308 (1 samples)
+Overall average transaction latency = -nan (1 samples)
+Overall maximum transaction latency = 2.22507e-308 (1 samples)
+Overall minimum fragmentation = 1.79769e+308 (1 samples)
+Overall average fragmentation = -nan (1 samples)
+Overall maximum fragmentation = 2.22507e-308 (1 samples)
+Overall average accepted rate = 0 (1 samples)
+Overall min accepted rate = 0 (1 samples)
+Slowest flit = -1
+Average hops = -nan (0 samples)
+Total run time 0.00557304
+router_0_0.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_0_0.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_0_1.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_0_1.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_0_2.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_0_2.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_1_0.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_1_0.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_1_1.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_1_1.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_1_2.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_1_2.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_2_0.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_2_0.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_2_1.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_2_1.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+router_2_2.bufferMonitor:
+[ 0 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 1 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 2 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 3 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+[ 4 ] Type=0:(R#0,W#0) Type=1:(R#0,W#0) Type=2:(R#0,W#0) Type=3:(R#0,W#0) Type=4:(R#0,W#0) 
+
+router_2_2.switchMonitor:
+Inputs=5Outputs=5[0 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[0 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[1 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[2 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[3 -> 4] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 0] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 1] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 2] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 3] 0:0 1:0 2:0 3:0 4:0 
+[4 -> 4] 0:0 1:0 2:0 3:0 4:0 
+
+FlitChannel: [0 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 1] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 2] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 3] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 4] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 5] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 6] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 7] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 8] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [1 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [2 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [3 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [4 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [5 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [6 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [7 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [8 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 1] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 2] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 3] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [0 -> 6] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [1 -> 2] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [1 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [1 -> 4] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [1 -> 7] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [2 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [2 -> 1] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [2 -> 5] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [2 -> 8] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [3 -> 4] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [3 -> 5] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [3 -> 6] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [3 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [4 -> 5] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [4 -> 3] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [4 -> 7] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [4 -> 1] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [5 -> 3] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [5 -> 4] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [5 -> 8] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [5 -> 2] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [6 -> 7] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [6 -> 8] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [6 -> 0] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [6 -> 3] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [7 -> 8] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [7 -> 6] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [7 -> 1] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [7 -> 4] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [8 -> 6] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [8 -> 7] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [8 -> 2] [Latency: 1] (0,0,0,0,0) (I#101)
+FlitChannel: [8 -> 5] [Latency: 1] (0,0,0,0,0) (I#101)

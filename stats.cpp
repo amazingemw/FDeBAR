@@ -33,7 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *class stores statistics gnerated by the trafficmanager such as the latency
  *hope count of the the flits
  *
- *reset option resets the min and max alues of this statistiscs
+ *reset option resets the min and max values of this statistiscs
  */
 
 #include "booksim.hpp"

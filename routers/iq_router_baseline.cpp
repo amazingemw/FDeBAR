@@ -154,6 +154,7 @@ void IQRouterBaseline::_VCAlloc( )
     }
     if (  cur_vc->GetStateTime( ) >= _vc_alloc_delay  ) {
       f = cur_vc->FrontFlit( );
+
       if(f->watch) {
 	*gWatchOut << GetSimTime() << " | " << FullName() << " | " 
 		   << "VC " << vc << " at input " << input
@@ -235,7 +236,7 @@ void IQRouterBaseline::_VCAlloc( )
 	dest_vc->TakeBuffer( vc );
 
 	f = cur_vc->FrontFlit( );
-	
+	// cur_vc->RemoveFlit();
 	if(f->watch)
 	  *gWatchOut << GetSimTime() << " | " << FullName() << " | "
 		     << "Granted VC " << vc << " at output " << output
@@ -245,7 +246,6 @@ void IQRouterBaseline::_VCAlloc( )
     }
   }
 }
-
 void IQRouterBaseline::_SWAlloc( )
 {
   Flit        *f;
@@ -602,15 +602,21 @@ void IQRouterBaseline::_SWAlloc( )
 	  f->vc = cur_vc->GetOutputVC( );
 	  dest_vc->SendingFlit( f );
 	  
-	  _crossbar_pipe->Write( f, expanded_output );
+	  _crossbar_pipe->Write( f, expanded_output ); // switch traversal takes place in this line
 	  
-	  if(f->tail) {
-	    if(cur_vc->Empty()) {
+	  if(f->tail)
+	  {
+	    if(cur_vc->Empty())
+	    {
 	      cur_vc->SetState(VC::idle);
-	    } else if(_routing_delay > 0) {
+	    }
+	    else if(_routing_delay > 0)
+	    {
 	      cur_vc->SetState(VC::routing);
 	      _routing_vcs.push(input*_vcs+vc);
-	    } else {
+	    }
+	    else
+	    {
 	      cur_vc->Route(_rf, this, cur_vc->FrontFlit(), input);
 	      cur_vc->SetState(VC::vc_alloc);
 	      _vcalloc_vcs.insert(input*_vcs+vc);
@@ -618,7 +624,9 @@ void IQRouterBaseline::_SWAlloc( )
 	    _switch_hold_in[expanded_input]   = -1;
 	    _switch_hold_vc[expanded_input]   = -1;
 	    _switch_hold_out[expanded_output] = -1;
-	  } else {
+	  }
+	  else
+	  {
 	    // reset state timer for next flit
 	    cur_vc->SetState(VC::active);
 	  }
@@ -646,6 +654,6 @@ void IQRouterBaseline::_SWAlloc( )
       } 
     }
     
-    _credit_pipe->Write( c, input );
+    _credit_pipe->Write( c, input ); // writing credits in backward direction
   }
 }

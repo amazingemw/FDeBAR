@@ -74,7 +74,8 @@ public:
 	    int inputs, int outputs );
   
   virtual ~MECSRouter( );
-
+  virtual bool is4free();
+  virtual void _BlessWrite();
   virtual void AddInputChannel( FlitChannel *channel, CreditChannel *backchannel);
   virtual void AddOutputChannel( FlitChannel *channel, CreditChannel *backchannel );
   void AddInputChannel( FlitChannel *channel, CreditChannel *backchannel , int dir);
@@ -83,6 +84,9 @@ public:
   void AddForwarder(MECSForwarder* forwarder, int dir);
   void AddCreditForwarder(MECSCreditForwarder* forwarder, int dir);
 
+  virtual void BufferReinject(); //For MinBD
+  virtual void Redirect();
+  virtual void Eject();
   virtual void ReadInputs( );
   virtual void InternalStep( );
   virtual void WriteOutputs( );

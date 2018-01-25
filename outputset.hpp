@@ -59,8 +59,7 @@ public:
 
   int  GetVC( int output_port,  int vc_index, int *pri = 0 ) const;
   bool GetPortVC( int *out_port, int *out_vc ) const;
-private:
-  list<sSetElement> _outputs;
+  list<sSetElement> _outputs;//changed to public from private shankar
 };
 
 #endif

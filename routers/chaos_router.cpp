@@ -60,7 +60,7 @@ ChaosRouter::ChaosRouter( const Configuration& config,
 
   // Routing
 
-  _rf = GetRoutingFunction( config );
+  _rf = (tRoutingFunction)GetRoutingFunction( config );//typecasted shankar
 
   _input_route = new OutputSet * [_inputs];
   _mq_route    = new OutputSet * [_multi_queue_size];
@@ -116,7 +116,21 @@ ChaosRouter::ChaosRouter( const Configuration& config,
     _mq_matched[i] = false;
   }
 }
+bool ChaosRouter:: is4free()
+{
 
+}
+void ChaosRouter::_BlessWrite()
+{
+
+}
+void ChaosRouter::BufferReinject() //For MinBD
+{
+
+}
+void ChaosRouter::Redirect(){}
+void ChaosRouter::Eject()
+{}
 ChaosRouter::~ChaosRouter( )
 {
   int i;
@@ -154,7 +168,7 @@ void ChaosRouter::ReadInputs( )
   Credit *c;
 
   for ( int input = 0; input < _inputs; ++input ) { 
-    f = (*_input_channels)[input]->Receive();
+    f = (_input_channels)[input]->Receive();
 
     if ( f ) {
       _input_frame[input].push( f );

@@ -98,10 +98,11 @@ int on_off( int source, double rate )
 
 void InitializeInjectionMap( )
 {
-  /* Register injection processes functions here */
+  /* Register injection processes functions here */ 
 
   gInjectionProcessMap["bernoulli"] = &bernoulli;
   gInjectionProcessMap["on_off"]    = &on_off;
+	cout<<"injectionmap initialized...."<<endl; // added John
 }
 
 tInjectionProcess GetInjectionProcess( const Configuration& config )

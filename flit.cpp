@@ -42,13 +42,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ostream& operator<<( ostream& os, const Flit& f )
 {
-  os << "  Flit ID: " << f.id << " (" << &f << ")" 
+  os << " Flit ID: " << f.id << " (" << &f << ")" 
      << " Packet ID: " << f.pid
      << " Type: " << f.type 
      << " Head: " << f.head << " Tail: " << f.tail << endl;
-  os << "  Source: " << f.src << "  Dest: " << f.dest << " Intm: "<<f.intm<<endl;
-  os << "  Injection time: " << f.time << " Transaction start: " << f.ttime << "Arrival time: " << f.atime << " Phase: "<<f.ph<< endl;
-  os << "  From router "<<f.from_router<< " VC: " << f.vc << endl;
+  os << " Priority:  "<<f.pri;
+  os << " Source: " << f.src << "  Dest: " << f.dest << " Intm: "<<f.intm<<endl;
+  os << " Injection time: " << f.time << " Transaction start: " << f.ttime << "Arrival time: " << f.atime << " Phase: "<<f.ph<< endl;
+  os << " From router "<<f.from_router<< " VC: " << f.vc << " outport: "<<f.cur_port<< endl;
   return os;
 }
 
@@ -59,6 +60,13 @@ Flit::Flit()
   head      = false ;
   tail      = false ;
   true_tail = false ;
+  defl	    = false ;
+  silver    = false ;//Silver flit of MInBD 
+  port	    = -1;
+  hop_dist  = -1;
+  ndefl     = 0; //Kranthi: deflection count
+  get_port  = -1;
+
   time      = -1 ;
   ttime     = -1 ;
   atime     = -1 ;
@@ -67,7 +75,8 @@ Flit::Flit()
   id        = -1 ;
   pid       = -1 ;
   hops      = 0 ;
-  watch     = false ;
+  input = -1; //input channel added kranthi
+  watch     = true;	//changed to true shankar
   record    = false ;
   intm = 0;
   src = -1;
@@ -81,6 +90,7 @@ Flit::Flit()
   x_then_y = -1;
   data = 0;
   from_router = -1;
+  cur_port=-1;
 }  
 
 void Flit::Reset() 
@@ -90,6 +100,14 @@ void Flit::Reset()
   head      = false ;
   tail      = false ;
   true_tail = false ;
+  defl	    = false ;
+  silver    = false ; //Silver flit of MinBD
+  hop_dist  = -1;
+  port	    = -1;
+
+  ndefl     = 0; //Kranthi: deflection count
+  get_port  = -1;
+
   time      = -1 ;
   ttime     = -1 ;
   atime     = -1 ;
@@ -112,5 +130,6 @@ void Flit::Reset()
   x_then_y = -1;
   data = 0;
   from_router = -1;
+  cur_port=-1;
 }  
 

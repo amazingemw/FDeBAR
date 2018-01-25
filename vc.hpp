@@ -32,14 +32,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define _VC_HPP_
 
 #include <deque>
-
+#include <string.h>
 #include "flit.hpp"
 #include "outputset.hpp"
 #include "routefunc.hpp"
 #include "config_utils.hpp"
-
+typedef void (*tRoutingFunction)( const Router *, const Flit *, int in_channel, OutputSet *, bool );
 class VCRouter;
-
 class VC : public Module {
 public:
   enum eVCState { state_min = 0, idle = state_min, routing, vc_alloc, active, 
@@ -57,7 +56,6 @@ private:
   eVCState _state;
   int      _state_time;
   
-  OutputSet *_route_set;
   int _out_port, _out_vc;
 
   int _total_cycles;
@@ -81,10 +79,11 @@ private:
   bool _watched;
 
 public:
-  
+  OutputSet *_route_set;// changed from private to public shankar
+
   VC() {}; // jbalfour: hack for GCC 3.4.4+
   void _Init( const Configuration& config, int outputs );
-
+  
   VC( const Configuration& config, int outputs );
   VC( const Configuration& config, int outputs,
       Module *parent, const string& name );
@@ -93,7 +92,7 @@ public:
   bool AddFlit( Flit *f );
   Flit *FrontFlit( );
   Flit *RemoveFlit( );
-  
+  void SetActive();
   
   inline bool Empty( ) const
   {
@@ -140,7 +139,6 @@ public:
     return _pri;
   }
   void Route( tRoutingFunction rf, const Router* router, const Flit* f, int in_channel );
-
   void AdvanceTime( );
 
   // ==== Debug functions ====

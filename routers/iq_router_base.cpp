@@ -34,6 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <iomanip>
 #include <cstdlib>
 #include <cassert>
+#include<math.h>
 
 #include "globals.hpp"
 #include "random_utils.hpp"
@@ -58,23 +59,34 @@ IQRouterBase::IQRouterBase( const Configuration& config,
   _sw_alloc_delay   = config.GetInt( "sw_alloc_delay" );
   
   // Routing
-  _rf = GetRoutingFunction( config );
 
+   if(!_bless)
+   {
+
+	   _rf = (tRoutingFunction)GetRoutingFunction( config );
+   }
+   else
+   {
+	   _rb=(bRoutingFunction)GetRoutingFunction( config );
+   }
   // Alloc VC's
   _vc.resize(_inputs);
-  for ( int i = 0; i < _inputs; ++i ) {
-    _vc[i].resize(_vcs);
-    for (int j = 0; j < _vcs; ++j ) {
-      _vc[i][j] = new VC(config, _outputs);
-      vc_name << "vc_i" << i << "_v" << j;
-      _vc[i][j]->SetName( this, vc_name.str( ) );
-      vc_name.str("");
-    }
+  for ( int i = 0; i < _inputs; ++i )
+  {
+	_vc[i].resize(_vcs);
+	for (int j = 0; j < _vcs; ++j ) 
+	{
+	      _vc[i][j] = new VC(config, _outputs);
+	      vc_name << "vc_i" << i << "_v" << j;
+	      _vc[i][j]->SetName( this, vc_name.str( ) );
+	      vc_name.str("");
+  	}
   }
 
   // Alloc next VCs' buffer state
   _next_vcs.resize(_outputs);
-  for (int j = 0; j < _outputs; ++j) {
+  for (int j = 0; j < _outputs; ++j)
+ {
     _next_vcs[j] = new BufferState( config );
     vc_name << "next_vc_o" << j;
     _next_vcs[j]->SetName( this, vc_name.str( ) );
@@ -131,30 +143,239 @@ IQRouterBase::~IQRouterBase( )
   delete _credit_pipe;
 
 }
-  
+
+
+void IQRouterBase::Eject()
+{
+int Eject_band=2, t=0;
+//cout<<"Ejction";
+
+if(_Mod_MinBD == true && eject_flag == 1)	//check for ejection buffer has flit or not, if it has eject it first.
+{
+//cout<<sideeject_flit->id;getchar();
+  (*_output_channels)[4]->Send( sideeject_flit );
+  eject_flag = 0;
+  t++;
+}
+   for(int i = 0; i<4; i++)
+   {
+	 VC * cur_vc=_vc[i][0];
+	  if(cur_vc->GetStateTime() >= _routing_delay)
+	  {
+	    Flit * f = cur_vc->FrontFlit( );
+
+	    if(f)
+	    {
+	    	 //f->hops++;
+	   	 if( f->dest==this->GetID() && t<Eject_band)
+	    	 {	
+//cout<<"Ejecting:"<<f->id<<" S:"<<f->src<<" D:"<<f->dest<<endl;
+			t++;
+			f->cur_port=4;
+
+			this->nonempty_vc[i] = false; 
+	     
+	     		f = cur_vc->RemoveFlit();
+
+			if(_Mod_MinBD == true && t==2 && eject_flag==0 )//If two flits want to eject send second flit to sideeject
+			{
+//cout<<"side"<<f->id<<endl;
+				sideeject_flit = f;
+				eject_flag = 1;
+			}
+			else
+			(*_output_channels)[4]->Send( f );
+	    	  }   	   
+	    }
+	 }
+   }//for loop
+
+}
+
+void IQRouterBase::Redirect()
+{
+int i;
+VC * cur_vc;
+
+for( i=0;i<4;i++ )
+{
+
+cur_vc=_vc[i][0];
+
+if(cur_vc->Empty())
+break;
+}
+
+if( i==4 && reinject_flag >=c_threshold )
+{
+//cout<<reinject_flag<<"****************************************";
+int rand_vc=RandomInt(3);
+cur_vc = _vc[rand_vc][0];
+redirect_flag = 1;
+redirect_flit = cur_vc->RemoveFlit();	//Redirect_flit contains the flit removed from pipeline, will be added to side buffer after reinjection.
+this->nonempty_vc[i] = false; 
+}
+
+}
+
+void IQRouterBase::BufferReinject()	//For MinBD
+{
+int port;
+Flit *f;
+int i;
+
+
+
+if( !sidebuff.empty() )
+{
+f = sidebuff.front();
+
+  if( f )
+  {
+
+	reinject_flag++;	// Redirection checking flag incremented
+
+	int x = this->field.x&15;
+	if( x>0)
+	{
+
+	   for( i=0;i<4;i++ )
+	   {	
+//		if( this->nonempty_vc[i] == false )
+VC * cur_vc=_vc[i][0];if(cur_vc->Empty())		
+		{
+		port = i;
+		int k = pow(2,port);
+		int z = this->use_const;
+		z = z&15;
+		  if( k==(k&z) && port!=2*gN )
+		  {
+//cout<<"At "<<this->GetID()<<" :: "<<f->id<<" Reinjected";//getchar();
+			//allocate now 
+			VC * cur_vc=_vc[i][0];
+			++_received_flits[i];	
+			
+			f->input = i;
+
+			f->port = i;	//current port
+//cout<<f->id<<" reinject"<<endl;
+			cur_vc->AddFlit(f);
+	
+			reinject_flag = 0;	//Reinjection successful so flag is clear to zero ( Redirection check flag )
+			
+			cur_vc->SetActive();
+
+			this->nonempty_vc[i]=true;
+			sidebuff.pop();	
+
+//cout<<" Size:"<<sidebuff.size();
+
+			switch(port)
+	    		{
+	    		case 0:this->field.x = this->field.x&30;break;//13; break;
+	    		case 1:this->field.x = this->field.x&29;break;//14; break;
+	    		case 2:this->field.x = this->field.x&27;break;//7; break;
+	    		case 3:this->field.x = this->field.x&23;break;//11; break;
+	    		}
+			break;			
+		   }
+
+		 }
+	     }
+
+	  }
+	
+  }
+}	//else if(GetSimTime() == 2245 && this->GetID()==13 ) {cout<<"Sachindi";getchar();}
+
+if( redirect_flag == 1)	//Injecting the redirected flit to side buffer
+{
+redirect_flag = 0;
+this->sidebuff.push(redirect_flit);
+}
+
+}
+
 void IQRouterBase::ReadInputs( )
 {
   _ReceiveFlits( );
+  if(!_bless)
   _ReceiveCredits( );
 }
 
 void IQRouterBase::InternalStep( )
 {
   //  _InputQueuing( );
+Flit *f = (_input_channels)[4]->Receive();
+    if ( f )
+    {
+//	cout<<"New flit:"<<f->id<<"|"<<this->GetID()<<endl;
+
+	VC * cur_vc=_vc[f->cur_port][0];
+	++_received_flits[4];	
+	f->input = 4;
+	cur_vc->AddFlit(f);
+	cur_vc->SetActive();
+    }
+    
+
   _Route( );
-  _Alloc( );
-  
-  for ( int input = 0; input < _inputs; ++input ) {
+
+if(!_bless)
+{	  _Alloc( );
+
+ for ( int input = 0; input < _inputs; ++input ) {
     for ( int vc = 0; vc < _vcs; ++vc ) {
       _vc[input][vc]->AdvanceTime( );
     }
   }
-
+}
+if(!_bless)
+{
   _crossbar_pipe->Advance( );
   _credit_pipe->Advance( );
+ _OutputQueuing( );
+}
+}
+
+void IQRouterBase::_BlessWrite()
+{
+//cout<<"Router"<<this->GetID()<<endl;
+	int i,output;
+	Flit *f;
+	VC *cur_vc;
 
 
-    _OutputQueuing( );
+ if(!flitbuff3.empty())
+  {  
+  list<Flit *>::iterator it;
+
+  for ( it=flitbuff3.begin() ; it!=flitbuff3.end(); it++ )
+  {
+  	f = *it;
+	f->from_router = this->GetID();
+	output=f->cur_port;
+	++_sent_flits[output];
+	if(gTrace && f)
+	{cout<<"Outport "<<output<<endl;cout<<"Stop Mark"<<endl;}
+//	cout<<f->id<<" Sending to port:"<<output<<endl;
+	(*_output_channels)[output]->Send( f );
+	
+  }
+  flitbuff3.clear();
+  }
+
+  if(!flitbuff2.empty())
+  {
+
+  list<Flit *>::iterator it;
+  for ( it=flitbuff2.begin() ; it!= flitbuff2.end(); it++ )
+  {
+  	   	flitbuff3.push_back(*it);   
+  }
+  flitbuff2.clear();
+  }
+
 }
 
 void IQRouterBase::WriteOutputs( )
@@ -163,50 +384,82 @@ void IQRouterBase::WriteOutputs( )
   _SendCredits( );
 }
 
+
 void IQRouterBase::_ReceiveFlits( )
 {
-  Flit *f;
+//cout<<"Receving flits";getchar();
+  Flit *f, *f1;
   bufferMonitor.cycle() ;
-  for ( int input = 0; input < _inputs; ++input ) { 
-    f = (*_input_channels)[input]->Receive();
-    if ( f ) {
-      ++_received_flits[input];
-      VC * cur_vc = _vc[input][f->vc];
+for(int i=0;i<_inputs; i++)
+this->nonempty_vc[i] = false;
 
-      if ( cur_vc->GetState( ) == VC::idle ) {
-	  if ( !f->head ) {
-	    Error( "Received non-head flit at idle VC" );
-	  }
-	  cur_vc->SetState( VC::routing );
-	  _routing_vcs.push(input*_vcs+f->vc);
-      }
+  for ( int input = 0; input < _inputs; ++input )
+  {
+    f = (_input_channels)[input]->Receive();
+    if ( f )
+    {
 
-      if(f->watch) {
-	*gWatchOut << GetSimTime() << " | " << FullName() << " | "
-		   << "Adding flit " << f->id
-		   << " to VC " << f->vc
-		   << " at input " << input
-		   << " (state: " << VC::VCSTATE[cur_vc->GetState()];
-	if(cur_vc->Empty()) {
-	  *gWatchOut << ", empty";
-	} else {
-	  assert(cur_vc->FrontFlit());
-	  *gWatchOut << ", front: " << cur_vc->FrontFlit()->id;
+this->nonempty_vc[input] = true;
+
+		f->port = input;	//current port
+
+		++_received_flits[input];	
+		VC * cur_vc = _vc[input][f->vc];
+
+		if (( cur_vc->GetState( ) == VC::idle) && !_bless)
+        	{
+    	  		if ( !f->head )
+    	  		{
+    		  		Error( "Received non-head flit at idle VC" );
+    	  		}
+		  	cur_vc->SetState( VC::routing );
+		  	_routing_vcs.push(f->input*_vcs+f->vc);			//why this....?
+        	}
+
+        	if(_bless)
+        	{
+			cur_vc->SetState(VC::routing);	// now VC is ready for routing
+        	}
+
+	 	if(f->watch)
+         	{
+    	  		*gWatchOut << GetSimTime() << " | " << FullName() << " | "
+		   	<< "Adding flit " << f->id
+		   	<< " to VC " << f->vc
+		   	<< " at input " << f->input
+		   	<< " (state: " << VC::VCSTATE[cur_vc->GetState()];
+    	   	
+			if(cur_vc->Empty())
+    	   		{
+    		   	*gWatchOut << ", empty";
+    	   		}
+    	   		else
+    	   		{
+    		   		assert(cur_vc->FrontFlit());
+    		   		*gWatchOut << ", front: " << cur_vc->FrontFlit()->id;
+    	   		}
+	 			*gWatchOut << ")." << endl;
+    	   			*gWatchOut << GetSimTime() << " | " << FullName() << " | "
+		   		<< "Received flit " << f->id
+		   		<< " from channel at input " << f->input
+				<< "." << endl;
+      		}
+
+      		if ( !cur_vc->AddFlit( f ) )
+      		{
+    	  		Error( "VC buffer overflow" );
+      		}
+				
+	  
 	}
-	*gWatchOut << ")." << endl;
-	*gWatchOut << GetSimTime() << " | " << FullName() << " | "
-		   << "Received flit " << f->id
-		   << " from channel at input " << input
-		   << "." << endl;
-      }
-      if ( !cur_vc->AddFlit( f ) ) {
-	Error( "VC buffer overflow" );
-      }
-      bufferMonitor.write( input, f ) ;
-    }
-  }
+	}
 }
-
+bool IQRouterBase::is4free()
+{
+	if( _vc[4][0]->Empty())
+		return true;
+	return false;
+}
 void IQRouterBase::_ReceiveCredits( )
 {
   Credit *c;
@@ -235,7 +488,7 @@ void IQRouterBase::_InputQueuing( )
 	  if ( !f->head ) {
 	    Error( "Received non-head flit at idle VC" );
 	  }
-
+o
 	  cur_vc->SetState( VC::routing );
 	}
       }
@@ -247,22 +500,91 @@ void IQRouterBase::_InputQueuing( )
 //this function relies on the fact that _routing delay is constant for all packets
 //if the packet at the head of the queue is <routing_delay, then all other vc in the queue
 //will be <routing delay
+#include<fstream>
+ofstream out1("priority__");
+priority_queue<order> order_flits;
 void IQRouterBase::_Route( )
 {
-  int size = _routing_vcs.size();
-  for(int i = 0; i<size; i++){
-    int vc_encode = _routing_vcs.front();
-    VC * cur_vc = _vc[vc_encode/_vcs][vc_encode%_vcs];
-    if(cur_vc->GetStateTime( ) >= _routing_delay){
-      Flit * f = cur_vc->FrontFlit( );
-      cur_vc->Route( _rf, this, f,  vc_encode/_vcs);
-      cur_vc->SetState( VC::vc_alloc ) ;
-      _vcalloc_vcs.insert(vc_encode);
-      _routing_vcs.pop();
-    } else {
-      break;
+//cout<<"\nRouter:"<<this->GetID()<<endl;
+	int i,output, x1,y1,x2,y2;
+	Flit *f;
+	VC *cur_vc;
+x1 = this->GetID()/gK;
+y1 = this->GetID()%gK;
+
+if(_bless)
+{ 
+  if(!flitbuff1.empty())
+  {
+
+    int silv = RandomInt(flitbuff1.size());   
+    int cnt = 0;
+    list<Flit *>::iterator it;
+    for ( it=flitbuff1.begin() ; it!= flitbuff1.end(); it++ )
+    {
+    	 f = *it;
+  	   if( cnt == silv && _Mod_MinBD == false )
+  	   f->silver = true;
+
+  	   VC *fake;
+
+       x2 = f->dest/gK;
+       y2 = f->dest%gK;
+       if(_Mod_MinBD == true) 
+       f->hop_dist = -(abs(x2-x1)+abs(y2-y1));
+       else
+       f->hop_dist = -1;
+
+       //cout<<"\nHurreee"<<f->id<<" Port:"<<f->port<<endl;
+  	   flitbuff2.push_back(f);
+
+  	   //order_flits.push( order (f->hop_dist, f, fake) );  //##INFD 
+       order_flits.push( order (f->ndefl, f, fake) ); //##INFD
+       
+       cnt++;
     }
-  }
+
+    flitbuff1.clear();
+	  _rb(this, &order_flits);
+  } 
+
+
+	for(i=0;i<4;i++)	//For each virtual channel
+	{
+		cur_vc=_vc[i][0];
+
+		if(!cur_vc->Empty())
+		{
+		      	f = cur_vc->RemoveFlit();
+		      	assert(f);
+			f->port = i;	//Incomming port number
+			flitbuff1.push_back(f);
+		}
+	}
+}
+			
+  else
+  {
+	  int size = _routing_vcs.size();
+	  for(int i = 0; i<size; i++)
+	  {
+		  int vc_encode = _routing_vcs.front();
+		  VC * cur_vc = _vc[vc_encode/_vcs][vc_encode%_vcs];
+		  if(cur_vc->GetStateTime( ) >= _routing_delay)
+		  {
+			  Flit * f = cur_vc->FrontFlit( );
+			  cur_vc->Route(_rf,this,f,vc_encode/_vcs);	//added shankar
+			  //commented shankar  cur_vc->Route( _rf, this, f,  vc_encode/_vcs);// calls the routing function
+			  cur_vc->SetState( VC::vc_alloc ) ;
+			  _vcalloc_vcs.insert(vc_encode);
+			  _routing_vcs.pop();
+		  }
+		  else
+		  {
+			  break;
+		  }
+	  }
+	}
 
 }
 
@@ -313,6 +635,7 @@ void IQRouterBase::_SendFlits( )
       f = 0;
     }
     if(gTrace && f){cout<<"Outport "<<output<<endl;cout<<"Stop Mark"<<endl;}
+   // cout<<"Outport "<<output<<"    Stop Mark"<<endl;
     (*_output_channels)[output]->Send( f );
   }
 }

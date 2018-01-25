@@ -113,14 +113,22 @@ void VC::_Init( const Configuration& config, int outputs )
 
 bool VC::AddFlit( Flit *f )
 {
-  assert(f);
 
-  if((int)_buffer.size() >= _size) return false;
+  assert(f);
+  if((int)_buffer.size() >= _size) 
+  { 
+	//Flit *f = _buffer.front(); //this is just for outputting that buffer contains the flits of packet <id>
+	//cout<<"\n I have "<<f->id;
+	return false; 
+  }
 
   // update flit priority before adding to VC buffer
-  if(_pri_type == local_age_based) {
+  if(_pri_type == local_age_based)
+  {
     f->pri = -GetSimTime();
-  } else if(_pri_type == hop_count_based) {
+  }
+  else if(_pri_type == hop_count_based)
+  {
     f->pri = f->hops;
   }
 
@@ -158,12 +166,15 @@ void VC::SetState( eVCState s )
   
   // do not reset state time for speculation-related pseudo state transitions
   if(((_state == vc_alloc) && (s == vc_spec)) ||
-     ((_state == vc_spec) && (s == vc_spec_grant))) {
+     ((_state == vc_spec) && (s == vc_spec_grant)))
+  {
     assert(f);
     if(f->watch)
       *gWatchOut << GetSimTime() << " | " << FullName() << " | "
 		  << "Keeping state time at " << _state_time << "." << endl;
-  } else {
+  }
+  else
+  {
     if(f && f->watch)
       *gWatchOut << GetSimTime() << " | " << FullName() << " | "
 		  << "Resetting state time." << endl;
@@ -187,18 +198,25 @@ void VC::SetOutput( int port, int vc )
 void VC::UpdatePriority()
 {
   if(_buffer.empty()) return;
-  if(_pri_type == queue_length_based) {
+  if(_pri_type == queue_length_based)
+  {
     _pri = _buffer.size();
-  } else if(_pri_type != none) {
+  }
+  else if(_pri_type != none)
+  {
     Flit * f = _buffer.front();
-    if((_pri_type != local_age_based) && _priority_donation) {
+    if((_pri_type != local_age_based) && _priority_donation)
+    {
       Flit * df = f;
-      for(int i = 1; i < _buffer.size(); ++i) {
-	Flit * bf = _buffer[i];
-	if(bf->pri > df->pri) df = bf;
+      for(int i = 1; i < _buffer.size(); ++i)
+      {
+    	  Flit * bf = _buffer[i];
+    	  if(bf->pri > df->pri)
+    		  df = bf;    //donation of a priority to a flit in the front of a queue
       }
-      if((df != f) && (df->watch || f->watch)) {
-	*gWatchOut << GetSimTime() << " | " << FullName() << " | "
+      if((df != f) && (df->watch || f->watch))
+      {
+    	  *gWatchOut << GetSimTime() << " | " << FullName() << " | "
 		    << "Flit " << df->id
 		    << " donates priority to flit " << f->id
 		    << "." << endl;
@@ -223,6 +241,10 @@ int VC::GetSize() const
 void VC::Route( tRoutingFunction rf, const Router* router, const Flit* f, int in_channel )
 {  
   rf( router, f, in_channel, _route_set, false );
+}
+void VC::SetActive()
+{
+	_state= active;
 }
 
 void VC::AdvanceTime( )

@@ -1,0 +1,2481 @@
+.........................$$ Simulation Output $$.......................
+param0   channel_file=  
+param1   trace_file=  trace-file.txt
+param2   topology=  torus
+param3   routing_function=  none
+param4   router=  iq
+param5   filter_spec_grants=  confl_nonspec_gnts
+param6   vc_allocator=  islip
+param7   sw_allocator=  islip
+param8   vc_alloc_arb_type=  round_robin
+param9   sw_alloc_arb_type=  round_robin
+param10   bless=  false
+param11   traffic=  uniform
+param12   injection_process=  bernoulli
+param13   priority=  age
+param14   sim_type=  latency
+param15   watch_file=  
+param16   watch_out=  
+param17   stats_out=  *
+param18   flow_out=  
+param19   power_output_file=  pwr_tmp
+param20   tech_file=  ../utils/temp
+param21   network_file=  
+Default values succesfully loaded
+returned from default config value setting to main ()
+Configuration file : examples/meshbless2
+######..Parsing config file ....##########
+param22 S topology = mesh
+param23 I  k = 4
+param24 I  n = 2
+param25 S routing_function = dor_bless
+param26 I  num_vcs = 1
+param27 I  vc_buf_size = 1
+param28 S bless = true
+param29 I  wait_for_tail_credit = 1
+param30 S vc_allocator = select
+param31 S sw_allocator = select
+param32 I  alloc_iters = 1
+param33 I  credit_delay = 1
+param34 I  routing_delay = 1
+param35 I  vc_alloc_delay = 1
+param36 I  input_speedup = 1
+param37 I  output_speedup = 1
+param38 F  internal_speedup = 1
+param39 S traffic = uniform
+param40 I  const_flits_per_packet = 1
+param41 S sim_type = latency
+param42 F  injection_rate = 0.12
+END Configuration File: examples/meshbless2
+........... Returning to main after parsing.............
+routemap initialized....
+trafficmap initialized....
+injectionmap initialized....
+............Network parameters - computed ............
+ k= 4 &  n= 2, Total# nodes =16,  Total # channels =64
+......................................................................
+Network build succesfull !!..... channels and nodes created & initialized ..
+Packet Size = 1
+traffic manager instantiated !!!  & returned to MAIN!!!
+
+no of calls to single sim   ********************************************************* 1
+classes ==1
+_warmup_periods =3
+_sample_period =1000
+_max_samples= 10
+12    13
+14    15
+3    2
+8    12
+13    14
+10    14
+6    5
+14    13
+14    15
+9    8
+4    8
+10    9
+10    11
+9    13
+1    0
+1    2
+11    10
+13    12
+2    3
+10    6
+10    14
+10    9
+14    10
+11    10
+5    1
+0    1
+6    5
+7    11
+14    13
+1    2
+9    8
+6    10
+14    13
+6    2
+4    0
+2    1
+9    5
+5    6
+10    6
+10    11
+10    14
+2    6
+0    1
+7    3
+10    6
+7    11
+15    14
+3    2
+8    4
+4    5
+13    9
+6    10
+14    10
+8    12
+6    7
+11    10
+9    10
+14    15
+4    0
+10    6
+10    14
+11    15
+4    0
+7    3
+8    4
+2    6
+10    9
+2    1
+5    6
+10    9
+7    11
+14    13
+13    14
+9    8
+14    10
+7    11
+13    12
+11    10
+14    15
+6    2
+4    5
+1    5
+12    13
+15    14
+5    9
+14    13
+11    7
+9    10
+15    11
+14    13
+10    14
+0    1
+8    4
+0    4
+10    6
+4    8
+10    9
+14    10
+8    12
+1    5
+11    10
+2    3
+7    6
+3    7
+6    10
+4    0
+1    0
+3    2
+0    4
+4    8
+8    9
+2    1
+7    11
+1    2
+6    7
+3    7
+4    8
+11    10
+14    10
+0    1
+7    3
+8    4
+12    8
+13    12
+10    14
+4    0
+6    2
+7    6
+3    7
+10    14
+0    1
+6    2
+2    3
+5    6
+14    15
+4    0
+6    5
+12    8
+7    11
+14    13
+6    7
+6    2
+9    5
+11    10
+10    14
+2    6
+3    7
+9    8
+2    1
+10    6
+4    5
+6    10
+7    11
+10    14
+0    4
+10    6
+6    7
+10    9
+3    2
+14    10
+9    10
+10    14
+3    2
+8    4
+2    6
+11    7
+9    8
+2    1
+5    4
+5    6
+11    10
+7    3
+6    5
+7    6
+8    9
+6    10
+6    7
+12    8
+8    9
+10    9
+3    2
+6    5
+4    5
+6    10
+10    6
+2    6
+11    7
+6    7
+3    7
+9    8
+4    8
+5    1
+5    6
+10    11
+7    3
+0    4
+5    6
+7    11
+0    4
+15    11
+1    0
+6    2
+9    5
+1    5
+14    10
+9    10
+11    10
+2    6
+3    7
+2    1
+8    4
+2    6
+7    6
+5    1
+7    3
+10    6
+8    9
+10    9
+9    10
+6    10
+7    11
+12    13
+9    8
+1    0
+6    2
+11    7
+12    8
+8    12
+13    14
+9    5
+2    6
+11    7
+3    7
+14    10
+8    12
+5    4
+7    6
+2    1
+10    9
+8    9
+12    13
+1    2
+9    5
+3    7
+9    10
+13    14
+3    2
+4    8
+4    0
+7    6
+5    1
+9    5
+4    8
+5    9
+7    3
+0    4
+1    2
+5    4
+8    4
+9    10
+8    12
+9    13
+9    5
+11    7
+2    1
+12    13
+0    1
+9    5
+5    6
+8    9
+14    15
+0    4
+13    9
+13    14
+6    2
+1    2
+12    13
+5    4
+4    5
+9    8
+4    8
+11    10
+13    14
+10    9
+5    1
+2    1
+10    6
+0    4
+10    9
+13    9
+15    11
+10    11
+3    2
+10    6
+1    2
+2    3
+9    5
+4    5
+9    8
+11    10
+13    14
+7    3
+13    12
+8    12
+11    15
+0    1
+5    1
+1    2
+5    4
+13    9
+15    11
+1    2
+11    10
+15    11
+12    13
+9    13
+2    3
+6    5
+11    7
+4    8
+7    11
+14    13
+4    0
+10    9
+14    10
+13    14
+1    0
+5    4
+8    12
+14    15
+0    1
+5    6
+10    6
+15    14
+8    4
+9    13
+2    1
+6    5
+9    5
+9    5
+11    15
+5    9
+2    1
+3    2
+2    6
+11    7
+4    8
+7    11
+3    2
+13    9
+15    11
+7    11
+12    13
+9    10
+14    10
+12    13
+7    3
+0    4
+6    5
+8    9
+15    11
+13    12
+13    14
+15    14
+5    1
+8    12
+6    2
+5    4
+5    9
+14    15
+1    0
+1    2
+7    6
+11    7
+9    8
+13    9
+14    13
+12    13
+14    15
+5    1
+9    5
+4    8
+11    10
+10    11
+2    3
+7    3
+4    5
+9    5
+10    6
+10    14
+15    14
+2    1
+0    1
+11    7
+10    9
+8    12
+10    14
+3    2
+8    4
+11    7
+6    10
+7    11
+14    15
+4    0
+1    2
+8    4
+9    8
+4    0
+9    10
+11    10
+2    3
+9    5
+2    6
+3    7
+11    7
+12    8
+13    14
+0    1
+8    4
+10    9
+10    11
+8    12
+2    1
+7    3
+4    5
+7    11
+1    0
+6    2
+9    8
+10    9
+13    9
+15    11
+12    13
+9    13
+1    2
+4    8
+11    10
+9    10
+10    14
+3    2
+7    3
+11    7
+6    10
+13    12
+13    14
+10    9
+5    9
+10    11
+8    12
+2    1
+5    9
+14    15
+1    0
+7    3
+2    6
+15    11
+12    13
+4    0
+4    8
+9    10
+6    10
+6    2
+12    8
+6    10
+13    14
+5    1
+0    1
+5    4
+7    6
+10    11
+8    12
+2    1
+8    4
+10    14
+14    15
+1    0
+10    6
+15    11
+12    13
+1    0
+0    4
+4    5
+6    5
+9    5
+6    2
+11    7
+6    10
+13    12
+13    14
+5    1
+8    4
+10    6
+4    8
+5    9
+8    4
+7    6
+13    9
+10    14
+1    0
+5    1
+3    2
+10    6
+14    10
+9    13
+0    4
+4    5
+9    5
+11    15
+11    7
+3    7
+10    11
+12    13
+5    1
+7    3
+5    9
+13    9
+7    11
+13    14
+1    2
+7    3
+2    6
+9    10
+8    12
+6    7
+12    8
+7    11
+12    13
+2    1
+5    1
+4    8
+8    9
+14    13
+2    3
+5    4
+8    4
+10    9
+14    10
+13    12
+4    0
+1    2
+5    6
+15    11
+0    4
+9    5
+6    5
+4    8
+15    14
+6    2
+9    5
+11    7
+11    10
+9    13
+5    1
+8    4
+4    5
+14    15
+7    3
+5    6
+13    12
+13    14
+1    0
+10    6
+8    9
+7    11
+15    11
+0    4
+9    5
+1    5
+10    11
+13    14
+11    7
+6    7
+9    13
+2    1
+5    1
+9    5
+12    8
+9    10
+5    1
+2    3
+3    7
+13    9
+9    10
+13    12
+14    13
+15    14
+1    0
+5    6
+3    2
+6    5
+12    8
+8    9
+5    9
+15    11
+1    2
+5    4
+5    6
+6    7
+14    13
+15    14
+11    15
+0    1
+2    1
+9    13
+2    3
+7    3
+1    5
+7    6
+4    8
+13    9
+10    14
+1    0
+6    5
+14    15
+4    0
+3    2
+4    5
+9    5
+8    9
+13    9
+10    11
+0    4
+11    7
+6    10
+5    1
+1    2
+2    6
+9    8
+9    10
+13    14
+7    3
+8    4
+0    4
+10    6
+4    8
+9    10
+15    14
+13    14
+2    6
+14    15
+2    1
+4    5
+9    5
+5    9
+10    9
+9    13
+12    13
+14    10
+11    15
+8    4
+5    6
+3    2
+5    9
+8    9
+11    10
+13    12
+4    0
+1    2
+11    7
+7    11
+12    13
+7    3
+2    3
+0    4
+7    11
+9    13
+1    0
+0    1
+8    4
+3    7
+13    14
+1    5
+9    5
+4    8
+10    9
+8    9
+6    2
+11    7
+4    0
+2    1
+6    5
+7    6
+9    13
+7    3
+4    8
+11    10
+7    11
+4    0
+0    1
+5    1
+10    6
+3    7
+15    11
+10    14
+3    2
+10    6
+3    7
+8    9
+13    9
+11    10
+1    2
+11    7
+7    11
+8    4
+6    5
+4    5
+5    9
+6    10
+2    3
+0    4
+4    0
+0    1
+15    11
+10    14
+8    4
+1    5
+2    6
+4    8
+1    2
+6    2
+6    7
+9    8
+15    11
+14    13
+14    15
+8    4
+14    10
+6    10
+2    3
+0    4
+4    0
+7    6
+5    6
+10    6
+10    9
+13    9
+8    12
+10    14
+15    14
+13    14
+2    1
+1    2
+10    11
+14    15
+4    5
+11    7
+4    8
+11    10
+14    10
+6    10
+9    10
+12    13
+14    15
+3    2
+10    6
+9    10
+13    12
+13    14
+10    14
+12    8
+10    9
+15    11
+7    11
+8    12
+15    14
+5    1
+11    15
+8    4
+9    10
+9    13
+12    13
+11    7
+4    8
+14    10
+6    7
+13    12
+10    14
+13    14
+6    5
+5    9
+8    9
+8    12
+5    1
+9    8
+15    11
+11    15
+5    4
+8    4
+0    4
+5    6
+6    10
+9    13
+14    13
+1    2
+1    5
+7    6
+9    8
+10    11
+1    0
+4    8
+5    9
+13    12
+15    14
+4    5
+6    5
+2    6
+12    8
+5    9
+8    9
+10    14
+11    15
+0    1
+11    7
+9    8
+13    9
+2    1
+5    4
+0    4
+10    6
+14    10
+9    13
+11    15
+0    4
+1    5
+5    6
+6    10
+1    0
+4    0
+7    11
+10    11
+15    11
+13    12
+10    14
+3    2
+2    3
+5    9
+5    1
+6    5
+4    5
+8    9
+14    15
+5    1
+8    4
+2    6
+6    7
+11    10
+14    13
+6    2
+1    2
+7    3
+5    4
+4    0
+10    6
+10    11
+7    11
+13    12
+13    14
+2    3
+5    6
+12    8
+7    11
+13    14
+15    14
+0    1
+11    7
+14    15
+8    4
+0    4
+3    7
+9    10
+9    13
+14    13
+1    2
+6    2
+11    15
+4    0
+10    6
+10    11
+15    11
+13    12
+13    14
+1    0
+4    0
+5    9
+15    14
+0    1
+5    6
+11    15
+8    4
+3    7
+12    8
+14    10
+14    13
+9    13
+1    2
+11    15
+13    12
+13    14
+5    9
+10    14
+0    1
+10    9
+9    10
+7    11
+12    13
+8    4
+4    8
+14    13
+12    13
+4    5
+9    8
+6    10
+10    11
+4    0
+11    7
+3    7
+5    9
+10    9
+11    10
+8    12
+13    12
+13    14
+1    2
+0    4
+12    8
+15    14
+8    4
+2    6
+10    9
+8    4
+4    5
+4    8
+12    13
+5    1
+9    8
+14    15
+11    10
+13    12
+8    12
+2    1
+0    4
+9    10
+9    5
+13    9
+9    13
+4    8
+9    8
+7    11
+13    14
+5    9
+8    12
+0    4
+11    10
+1    2
+3    7
+10    9
+9    13
+12    13
+4    8
+13    9
+5    4
+12    8
+10    11
+7    11
+13    12
+15    14
+0    1
+5    9
+13    12
+6    5
+11    10
+1    2
+1    5
+3    7
+9    10
+14    13
+9    13
+1    5
+8    9
+7    6
+10    6
+9    8
+10    11
+13    14
+0    1
+2    3
+0    4
+8    9
+15    14
+1    2
+11    7
+9    10
+6    10
+9    13
+14    13
+4    0
+6    2
+10    9
+11    15
+2    6
+9    8
+15    11
+13    14
+5    1
+5    6
+5    9
+15    11
+13    14
+8    4
+4    8
+11    10
+1    2
+10    9
+9    13
+4    5
+9    5
+8    9
+10    9
+14    15
+2    1
+7    6
+9    8
+7    11
+15    14
+5    9
+11    10
+4    0
+8    4
+6    5
+6    7
+4    8
+11    10
+13    14
+1    2
+3    2
+3    7
+9    13
+11    15
+2    3
+1    5
+10    11
+2    1
+5    6
+7    6
+12    8
+7    11
+13    14
+5    1
+7    3
+9    8
+5    9
+7    11
+6    2
+9    10
+14    10
+3    2
+9    5
+6    7
+3    7
+12    13
+2    3
+9    5
+11    7
+10    9
+8    9
+10    11
+9    13
+4    0
+10    6
+5    9
+7    11
+13    14
+7    3
+5    6
+9    8
+8    12
+1    2
+5    9
+9    10
+15    11
+14    10
+9    13
+1    2
+2    3
+6    5
+4    5
+11    7
+10    9
+8    9
+10    11
+14    15
+4    0
+2    1
+5    1
+13    14
+8    9
+13    9
+8    4
+7    6
+4    8
+6    10
+3    2
+0    4
+8    4
+9    5
+3    7
+9    10
+11    10
+2    3
+6    5
+1    5
+6    7
+10    9
+1    0
+5    1
+0    4
+12    8
+9    8
+7    11
+12    13
+7    3
+7    6
+13    9
+10    11
+1    2
+3    2
+2    6
+10    6
+4    8
+6    10
+5    1
+8    9
+8    12
+9    13
+2    3
+11    7
+13    9
+9    10
+2    1
+5    1
+2    6
+12    8
+10    11
+14    13
+13    14
+2    3
+4    8
+8    9
+5    9
+9    10
+9    5
+6    7
+3    2
+1    2
+0    4
+9    13
+15    14
+1    5
+4    8
+1    2
+5    6
+12    8
+13    14
+2    3
+8    9
+5    9
+12    13
+11    15
+5    6
+5    4
+9    5
+6    5
+9    10
+12    13
+1    0
+6    5
+1    5
+7    11
+8    12
+4    8
+10    11
+13    12
+10    14
+6    5
+5    6
+13    9
+14    13
+0    1
+5    1
+1    2
+3    7
+4    8
+13    9
+11    15
+5    4
+1    5
+6    10
+14    13
+7    3
+14    10
+8    12
+10    14
+1    0
+4    0
+0    1
+9    5
+10    6
+12    8
+7    11
+13    12
+12    13
+9    13
+1    2
+11    7
+10    9
+11    15
+2    1
+0    4
+3    7
+13    9
+14    10
+6    10
+15    14
+2    3
+9    5
+6    7
+5    9
+9    10
+1    0
+12    8
+14    10
+7    11
+15    11
+15    14
+6    2
+10    6
+13    9
+11    15
+0    1
+10    9
+14    13
+14    15
+0    4
+1    5
+9    10
+15    14
+1    2
+10    6
+14    10
+13    12
+1    0
+2    1
+9    8
+4    8
+10    11
+7    11
+6    7
+8    9
+0    1
+8    12
+14    15
+11    15
+2    1
+3    7
+10    9
+9    10
+1    2
+0    4
+5    6
+4    8
+14    10
+14    13
+13    14
+4    0
+1    0
+10    14
+6    7
+8    9
+5    1
+14    15
+11    15
+6    2
+1    5
+9    10
+1    2
+0    4
+11    10
+15    14
+13    14
+0    1
+9    5
+5    6
+7    11
+13    14
+5    1
+12    8
+10    9
+9    13
+0    1
+7    11
+9    13
+14    15
+1    0
+4    0
+8    4
+6    7
+9    8
+8    9
+13    12
+5    9
+11    10
+15    14
+13    14
+9    5
+15    11
+2    1
+12    8
+10    9
+9    13
+12    13
+6    5
+1    5
+1    0
+4    0
+7    3
+3    7
+11    7
+13    9
+8    9
+13    12
+3    2
+13    12
+0    1
+7    6
+6    10
+2    1
+8    4
+11    7
+12    8
+7    11
+12    13
+2    1
+6    2
+6    5
+11    10
+1    0
+2    3
+3    7
+13    14
+3    2
+5    6
+3    7
+5    9
+10    6
+11    10
+15    11
+5    1
+1    2
+9    8
+9    13
+6    2
+6    5
+9    5
+10    11
+1    0
+7    3
+2    3
+6    7
+14    10
+0    1
+7    6
+10    9
+5    9
+13    9
+3    2
+7    6
+9    10
+7    11
+12    13
+2    1
+3    2
+10    6
+11    7
+9    8
+14    13
+2    1
+6    2
+11    7
+6    10
+9    10
+10    11
+12    13
+9    13
+13    14
+2    3
+7    3
+3    7
+5    9
+13    12
+8    12
+5    6
+10    9
+5    9
+14    10
+6    2
+2    6
+5    9
+9    10
+12    13
+9    8
+9    13
+1    5
+6    5
+11    10
+13    14
+7    3
+8    12
+10    9
+8    9
+14    15
+1    2
+5    4
+10    6
+15    11
+9    13
+5    6
+11    7
+9    8
+4    8
+3    2
+6    2
+4    8
+11    10
+10    11
+13    12
+10    14
+1    5
+5    6
+14    10
+8    12
+2    1
+2    3
+0    4
+1    5
+10    9
+8    9
+14    15
+1    0
+7    3
+5    4
+1    5
+11    7
+9    10
+6    10
+15    11
+14    13
+5    6
+4    8
+9    8
+9    10
+1    2
+3    2
+5    9
+14    10
+10    11
+13    14
+6    5
+2    6
+11    7
+15    14
+10    9
+12    13
+14    15
+4    0
+5    1
+7    3
+4    5
+9    8
+4    8
+13    14
+11    15
+3    2
+7    3
+6    7
+8    12
+2    1
+0    4
+8    4
+9    5
+1    5
+8    9
+11    10
+0    4
+7    11
+9    13
+1    0
+4    5
+5    6
+10    9
+6    10
+9    13
+11    7
+7    11
+13    14
+6    7
+9    8
+14    13
+2    1
+6    5
+2    6
+5    9
+11    10
+15    11
+13    12
+1    0
+1    2
+6    5
+10    9
+8    9
+5    9
+6    10
+9    10
+15    14
+3    2
+3    7
+9    8
+15    11
+14    13
+9    13
+2    1
+0    1
+2    3
+1    5
+12    8
+11    15
+7    3
+7    11
+13    12
+13    14
+4    0
+3    2
+7    6
+10    9
+10    14
+4    0
+6    2
+3    2
+11    10
+7    11
+11    15
+1    5
+11    7
+9    13
+2    3
+8    4
+1    5
+11    7
+13    9
+6    10
+2    3
+10    6
+5    9
+7    11
+10    11
+1    0
+0    1
+5    6
+7    6
+9    8
+15    11
+6    2
+11    10
+12    13
+3    7
+9    10
+2    1
+10    9
+5    9
+10    14
+2    3
+10    11
+7    11
+4    0
+1    0
+4    8
+5    9
+6    2
+1    2
+8    4
+9    13
+14    15
+11    7
+3    7
+2    1
+7    3
+8    4
+4    5
+1    5
+13    14
+2    1
+10    6
+2    6
+12    8
+13    14
+1    0
+6    2
+7    6
+9    8
+5    9
+6    2
+1    2
+5    4
+6    5
+11    7
+14    15
+6    2
+3    7
+9    10
+5    1
+2    1
+2    3
+1    5
+11    7
+1    5
+10    6
+15    11
+13    12
+1    0
+7    6
+10    6
+8    9
+15    11
+3    2
+5    4
+9    5
+1    5
+14    10
+6    7
+9    10
+14    13
+6    5
+4    8
+13    9
+10    6
+9    8
+10    9
+5    9
+0    4
+10    6
+14    10
+9    10
+2    1
+1    5
+10    9
+11    10
+6    5
+5    6
+15    11
+10    11
+6    2
+9    8
+10    9
+5    9
+6    7
+11    7
+4    5
+9    10
+5    6
+6    10
+7    6
+5    6
+15    11
+10    11
+8    4
+10    9
+5    9
+6    5
+2    6
+11    7
+9    5
+14    10
+9    10
+6    5
+1    5
+12    8
+6    10
+10    6
+2    6
+5    6
+15    11
+10    11
+13    12
+5    4
+10    9
+8    9
+9    5
+6    7
+9    5
+9    8
+14    10
+9    10
+14    13
+7    3
+4    8
+11    10
+6    2
+5    6
+10    11
+13    12
+10    9
+8    9
+5    9
+10    14
+1    5
+11    7
+4    5
+9    10
+14    13
+12    13
+3    2
+2    3
+0    4
+1    5
+6    10
+11    10
+2    6
+15    11
+10    11
+13    12
+15    14
+8    4
+13    9
+8    9
+10    14
+1    2
+2    6
+10    6
+3    7
+7    11
+9    8
+11    10
+9    13
+12    13
+14    13
+11    15
+1    2
+7    3
+12    8
+9    8
+6    10
+11    10
+5    6
+14    10
+13    14
+15    14
+10    9
+5    9
+13    14
+0    4
+6    7
+11    7
+7    11
+14    15
+9    5
+8    9
+6    10
+14    13
+12    13
+11    15
+2    3
+11    10
+6    5
+7    6
+3    7
+10    11
+13    12
+13    14
+15    14
+12    8
+7    11
+8    4
+14    15
+10    6
+10    9
+14    10
+14    13
+12    13
+14    15
+11    10
+6    5
+7    6
+3    7
+12    8
+4    8
+10    11
+13    14
+14    10
+8    12
+5    4
+2    6
+11    7
+15    11
+9    13
+8    4
+7    6
+11    7
+9    10
+12    13
+9    10
+4    5
+6    5
+10    6
+4    8
+5    9
+15    11
+13    12
+10    14
+13    14
+12    8
+10    11
+8    12
+5    4
+7    11
+14    13
+0    4
+1    5
+6    10
+14    13
+12    13
+4    8
+9    10
+6    5
+3    7
+9    8
+8    12
+10    14
+15    14
+5    6
+5    9
+13    12
+14    13
+10    9
+9    10
+6    10
+12    13
+4    5
+11    7
+11    10
+10    11
+12    8
+10    14
+13    14
+5    6
+10    9
+13    9
+0    4
+15    11
+12    13
+11    15
+6    5
+9    10
+6    10
+4    5
+10    14
+5    4
+7    11
+15    14
+13    9
+13    12
+8    4
+14    13
+3    7
+9    10
+6    10
+11    15
+6    10
+8    12
+6    5
+12    8
+9    8
+15    14
+10    14
+7    6
+2    6
+8    9
+13    9
+7    11
+12    13
+8    4
+9    13
+6    7
+9    10
+13    14
+11    15
+3    7
+12    8
+13    12
+8    12
+12    13
+6    5
+9    8
+10    14
+14    15
+5    6
+8    9
+7    11
+9    13
+5    4
+4    8
+14    13
+5    6
+7    6
+10    9
+9    10
+10    14
+1    5
+8    12
+1    5
+9    8
+15    14
+13    14
+14    15
+6    10
+12    13
+5    4
+10    9
+8    9
+10    6
+6    7
+10    9
+6    10
+9    13
+9    5
+2    6
+9    10
+6    5
+12    8
+4    8
+8    12
+10    14
+13    14
+5    6
+13    12
+5    9
+14    13
+11    15
+0    4
+11    7
+4    8
+9    5
+6    5
+9    10
+9    13
+9    5
+1    5
+9    8
+7    11
+8    12
+10    14
+5    4
+2    6
+11    10
+10    11
+5    9
+8    9
+9    13
+7    6
+6    7
+3    7
+10    9
+5    9
+13    14
+9    10
+7    11
+6    5
+4    5
+9    8
+12    8
+4    8
+5    6
+2    6
+11    7
+11    10
+10    11
+12    13
+8    4
+8    9
+5    9
+14    15
+0    4
+5    4
+7    6
+6    7
+3    7
+10    9
+13    9
+13    14
+1    2
+9    10
+8    12
+12    13
+6    5
+9    5
+1    5
+12    8
+4    8
+9    8
+13    14
+4    5
+5    6
+3    7
+5    4
+10    6
+13    9
+6    10
+11    15
+8    4
+2    6
+13    9
+15    14
+0    4
+6    7
+8    9
+9    10
+8    12
+6    5
+4    8
+14    10
+7    11
+6    5
+12    8
+14    13
+12    13
+5    6
+2    6
+4    8
+9    8
+8    9
+14    15
+15    14
+6    7
+8    12
+9    5
+9    8
+5    9
+8    9
+13    14
+14    13
+11    15
+6    5
+5    6
+4    8
+6    10
+11    15
+5    4
+0    4
+9    13
+13    14
+10    11
+7    11
+4    8
+15    14
+5    9
+4    5
+3    7
+13    9
+14    10
+14    13
+12    13
+5    6
+10    11
+7    11
+8    4
+15    14
+10    14
+8    12
+14    15
+4    5
+9    10
+14    13
+12    8
+6    10
+13    12
+11    15
+9    8
+4    8
+13    14
+12    8
+10    14
+15    14
+5    6
+7    11
+9    13
+14    15
+10    9
+13    9
+12    13
+14    13
+6    10
+11    15
+1    5
+12    8
+7    11
+13    14
+6    10
+8    12
+13    14
+10    14
+2    6
+7    11
+13    12
+14    15
+5    9
+14    13
+9    13
+4    8
+9    10
+5    6
+10    14
+0    4
+14    13
+4    5
+9    8
+10    11
+14    15
+4    8
+10    14
+14    15
+9    8
+5    6
+10    9
+4    5
+9    8
+8    4
+5    6
+4    5
+12    8
+8    4
+10    6
+14    10
+7    6
+2    6
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+0
+simulation in Phase: Itertaion :0
+Minimum latency = 4
+Average latency = 28.632
+Maximum latency = 137
+Average fragmentation = 0
+Accepted packets = 0.044 at node 2 (avg = 0.0504375)
+latency change    = 1
+throughput change = 1
+completed warm up phase: 0
+Iteration  0 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+0
+simulation in Phase: Itertaion :1
+Minimum latency = 4
+Average latency = 28.632
+Maximum latency = 137
+Average fragmentation = 0
+Accepted packets = 0.022 at node 2 (avg = 0.0252188)
+latency change    = 0
+throughput change = 1
+completed warm up phase: 1
+Iteration  1 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+0
+simulation in Phase: Itertaion :2
+Minimum latency = 4
+Average latency = 28.632
+Maximum latency = 137
+Average fragmentation = 0
+Accepted packets = 0.0146667 at node 2 (avg = 0.0168125)
+latency change    = 0
+throughput change = 0.5
+completed warm up phase: 2
+Warmed up ...Time used is 3000 cycles
+Iteration  2 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :3
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = inf
+completed one running phase
+flag converged == 0
+Iteration  3 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :4
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  4 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :5
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  5 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :6
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  6 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :7
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  7 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :8
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  8 over
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+++++++++++++++++++++++++++++++++++++++
+1
+simulation in Phase: Itertaion :9
+Minimum latency = 1.79769e+308
+Average latency = -nan
+Maximum latency = 2.22507e-308
+Average fragmentation = -nan
+Accepted packets = 0 at node 0 (avg = 0)
+latency change    = nan
+throughput change = nan
+completed one running phase
+flag converged == 0
+Iteration  9 over
+#@#@#@#@#  Entered Draining stage @#@#@#@#@#@
+flag converged == 1
+Draining all recorded packets ...
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+WARNING: Possible network deadlock.
+Remaining flits: 598 621 628 635 651 656 675 676 681 690 [...] (52 flits, 52 packets)
+Measured flits: (0 flits, 0 packets)

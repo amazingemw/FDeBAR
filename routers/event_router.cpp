@@ -59,7 +59,7 @@ EventRouter::EventRouter( const Configuration& config,
 
   // Routing
 
-  _rf = GetRoutingFunction( config );
+  _rf =(tRoutingFunction) GetRoutingFunction( config );//casted shankar
 
   // Alloc VC's
 
@@ -142,6 +142,23 @@ EventRouter::EventRouter( const Configuration& config,
     _transport_match[i] = -1;
   }
 }
+bool EventRouter::is4free()
+{
+
+}
+void EventRouter::_BlessWrite()
+{
+
+}
+void EventRouter::BufferReinject() //For MinBD
+{
+
+}
+void EventRouter::Redirect()
+{
+}
+void EventRouter::Eject()
+{}
 
 EventRouter::~EventRouter( )
 {
@@ -245,7 +262,7 @@ void EventRouter::_ReceiveFlits( )
   Flit *f;
 
   for ( int input = 0; input < _inputs; ++input ) { 
-    f = (*_input_channels)[input]->Receive();
+    f = (_input_channels)[input]->Receive();
 
     if ( f ) {
       _input_buffer[input].push( f );

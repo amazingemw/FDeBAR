@@ -1,0 +1,52 @@
+// $Id$
+
+//4X4 mesh with 1 flits per packet under injection mode
+//injection rate here is packet per cycle, NOT flit per cycle
+
+// Topology    // for k-ray n cube it is k nodes in one dimension with total of n dimensions
+
+topology = mesh;
+k = 8; 
+n = 2;
+
+// Routing
+
+routing_function = dor_bless; // min_adapt or dim_order  planar_adapt
+side_buffersize = 4;
+C_threshold = 3;
+Mod_MinBD = true;
+// Flow control
+
+num_vcs     = 1;
+vc_buf_size = 1;
+
+bless=true;
+wait_for_tail_credit = 1;
+
+// Router architecture
+
+vc_allocator = select;
+sw_allocator = select;
+alloc_iters  = 1;
+
+//credit_delay   = 1;
+routing_delay  = 0;//By default bless will take routing delay=2
+//vc_alloc_delay = 1;
+
+input_speedup     = 1;
+output_speedup    = 1;
+internal_speedup  = 1.0;
+
+// Traffic
+
+traffic=uniform;
+const_flits_per_packet = 1;
+
+
+//read_request_size= 4;
+
+// Simulation  (throughput OR else latency)
+sim_time = 20000;
+sim_type       = latency; 
+injection_rate = 0.3;
+

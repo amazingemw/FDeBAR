@@ -1,0 +1,348 @@
+bgui.hpp:private:
+bgui.hpp:private:
+bgui.hpp:private:
+booksim_config.cpp:specific prior written permission.
+booksim_config.cpp:  _int_map["vc_priority_donation"] = 0; // allow high-priority flits to donate their priority to low-priority that they are queued up behind
+booksim_config.cpp:  _int_map["replies_inherit_priority"] = 0; // whenusing request-reply traffic (use_read_write=1) with age-based priority, make replies inherit their corresponding requests' age
+booksim_config.cpp:  //AddStrField( "priority", "none" );  // message priorities
+booksim_config.cpp:  AddStrField( "priority", "age" );	//changed to age based from none shankar
+booksim_config.cpp:  _int_map["print_activity"] = 0;  // if made to 1, shows the movements of flit port to port wise
+booksim_config.cpp:  _int_map["print_csv_results"] = 0; 
+booksim_config.cpp:  _int_map["print_vc_stats"] =0;  
+booksim_config.cpp:  (*important)[2].second.push_back( "priority");
+booksim_config.cpp:  (*important)[4].second.push_back("print_activity");
+booksim_config.cpp:  (*important)[4].second.push_back("print_csv_results");
+booksim_config.cpp:  (*important)[4].second.push_back("print_vc_stats");
+booksim_config.hpp:specific prior written permission.
+booksim.hpp:specific prior written permission.
+buffer_state.cpp:specific prior written permission.
+buffer_state.hpp:specific prior written permission.
+channel.hpp:specific prior written permission.
+configlex.cpp:			/* We matched some text prior to the EOB, first
+configlex.cpp:			fprintf( stderr, "%s\n", msg );
+config.tab.c:int yydebug;			/*  nonzero means print parse trace	*/
+config.tab.c:    fprintf(stderr, "Starting parse\n");
+config.tab.c:	fprintf(stderr, "Stack size increased to %d\n", yystacksize);
+config.tab.c:    fprintf(stderr, "Entering state %d\n", yystate);
+config.tab.c:/* Do appropriate processing given the current state.  */
+config.tab.c:	fprintf(stderr, "Reading a token: ");
+config.tab.c:	fprintf(stderr, "Now at end of input.\n");
+config.tab.c:	  fprintf (stderr, "Next token is %d (%s", yychar, yytname[yychar1]);
+config.tab.c:	  /* Give the individual parser a way to print the precise meaning
+config.tab.c:	  fprintf (stderr, ")\n");
+config.tab.c:    fprintf(stderr, "Shifting token %d (%s), ", yychar, yytname[yychar1]);
+config.tab.c:      fprintf (stderr, "Reducing via rule %d (line %d), ",
+config.tab.c:	fprintf (stderr, "%s ", yytname[yyrhs[i]]);
+config.tab.c:      fprintf (stderr, " -> %s\n", yytname[yyr1[yyn]]);
+config.tab.c:      fprintf (stderr, "state stack now");
+config.tab.c:	fprintf (stderr, " %d", *++ssp1);
+config.tab.c:      fprintf (stderr, "\n");
+config.tab.c:	fprintf(stderr, "Discarding token %d (%s).\n", yychar, yytname[yychar1]);
+config.tab.c:      fprintf (stderr, "Error: state stack now");
+config.tab.c:	fprintf (stderr, " %d", *++ssp1);
+config.tab.c:      fprintf (stderr, "\n");
+config.tab.c:    fprintf(stderr, "Shifting error token, ");
+config_tab.cpp:int yydebug;			/*  nonzero means print parse trace	*/
+config_tab.cpp:    fprintf(stderr, "Starting parse\n");
+config_tab.cpp:	fprintf(stderr, "Stack size increased to %d\n", yystacksize);
+config_tab.cpp:    fprintf(stderr, "Entering state %d\n", yystate);
+config_tab.cpp:/* Do appropriate processing given the current state.  */
+config_tab.cpp:	fprintf(stderr, "Reading a token: ");
+config_tab.cpp:	fprintf(stderr, "Now at end of input.\n");
+config_tab.cpp:	  fprintf (stderr, "Next token is %d (%s", yychar, yytname[yychar1]);
+config_tab.cpp:	  /* Give the individual parser a way to print the precise meaning
+config_tab.cpp:	  fprintf (stderr, ")\n");
+config_tab.cpp:    fprintf(stderr, "Shifting token %d (%s), ", yychar, yytname[yychar1]);
+config_tab.cpp:      fprintf (stderr, "Reducing via rule %d (line %d), ",
+config_tab.cpp:	fprintf (stderr, "%s ", yytname[yyrhs[i]]);
+config_tab.cpp:      fprintf (stderr, " -> %s\n", yytname[yyr1[yyn]]);
+config_tab.cpp:      fprintf (stderr, "state stack now");
+config_tab.cpp:	fprintf (stderr, " %d", *++ssp1);
+config_tab.cpp:      fprintf (stderr, "\n");
+config_tab.cpp:	fprintf(stderr, "Discarding token %d (%s).\n", yychar, yytname[yychar1]);
+config_tab.cpp:      fprintf (stderr, "Error: state stack now");
+config_tab.cpp:	fprintf (stderr, " %d", *++ssp1);
+config_tab.cpp:      fprintf (stderr, "\n");
+config_tab.cpp:    fprintf(stderr, "Shifting error token, ");
+config_utils.cpp:specific prior written permission.
+config_utils.hpp:specific prior written permission.
+credit.cpp:specific prior written permission.
+credit.hpp:specific prior written permission.
+flitchannel.cpp:specific prior written permission.
+flitchannel.cpp:  // FIXME: The destructor hardly seems like the appropriate place to print out 
+flitchannel.cpp:  if(_print_activity){
+flitchannel.hpp:specific prior written permission.
+flitchannel.hpp:private:
+flit.cpp:specific prior written permission.
+flit.cpp:  os << " Priotity:  "<<f.pri;
+flit.cpp:  pri = 0;
+flit.cpp:  pri = 0;
+flit.hpp:specific prior written permission.
+flit.hpp:  int  pri;
+globals.hpp:specific prior written permission.
+globals.hpp:extern bool _print_activity;
+injection.cpp:specific prior written permission.
+injection.hpp:specific prior written permission.
+main.cpp:specific prior written permission.
+main.cpp:/* printing activity factor*/ 
+main.cpp:bool _print_activity = true;  // added JOHN intial false
+main.cpp:	_print_activity = (config.GetInt("print_activity")==1);    // accept value from config file/ default config value of 'print_activity'
+misc_utils.cpp:specific prior written permission.
+misc_utils.hpp:specific prior written permission.
+module.cpp:specific prior written permission.
+module.hpp:specific prior written permission.
+module.hpp:private:
+outputset.cpp:specific prior written permission.
+outputset.cpp:void OutputSet::Add( int output_port, int vc, int pri  )
+outputset.cpp:  AddRange( output_port, vc, vc, pri );
+outputset.cpp:void OutputSet::AddRange( int output_port, int vc_start, int vc_end, int pri )
+outputset.cpp:  s.pri      = pri;
+outputset.cpp:int OutputSet::GetVC( int output_port, int vc_index, int *pri ) const
+outputset.cpp:  if ( pri ) { *pri = -1; }
+outputset.cpp:	if ( pri ) {
+outputset.cpp:	  *pri = i->pri;
+outputset.hpp:specific prior written permission.
+outputset.hpp:    int pri;
+outputset.hpp:  void Add( int output_port, int vc, int pri = 0 );
+outputset.hpp:  void AddRange( int output_port, int vc_start, int vc_end, int pri = 0 );
+outputset.hpp:  int  GetVC( int output_port,  int vc_index, int *pri = 0 ) const;
+outputset.hpp:  list<sSetElement> _outputs;//changed to public from private shankar
+pipefifo.hpp:specific prior written permission.
+power_module.cpp:specific prior written permission.
+power_module.hpp:specific prior written permission.
+random_utils.cpp:specific prior written permission.
+random_utils.hpp:specific prior written permission.
+rng.cpp:specific prior written permission.
+rng.cpp:/*    N.B. The MODIFICATIONS introduced in the 9th printing (2002) are
+rng.cpp:  printf("%ld\n", a[0]);             /* 995235265 */
+rng.cpp:  printf("%ld\n", a[0]);             /* 995235265 */
+rng_double.cpp:specific prior written permission.
+rng_double.cpp:/*    N.B. The MODIFICATIONS introduced in the 9th printing (2002) are
+rng_double.cpp:  printf("%.20f\n", ran_u[0]);            /* 0.36410514377569680455 */
+rng_double.cpp:     /* beware of buggy printf routines that do not give full accuracy here! */
+rng_double.cpp:  printf("%.20f\n", ran_u[0]);            /* 0.36410514377569680455 */
+rng_double_wrapper.cpp:specific prior written permission.
+rng.hpp:specific prior written permission.
+rng_wrapper.cpp:specific prior written permission.
+routefunc.cpp:   specific prior written permission.
+routefunc.cpp:bool _out_pri[5];
+routefunc.cpp:	// DOR for the escape channel (VC 0), low priority 
+routefunc.cpp:							<< " with priority " << 1
+routefunc.cpp:							<< " with priority " << 1
+routefunc.cpp:						// Low priority escape path
+routefunc.cpp:						// Go in a productive direction with high priority
+routefunc.cpp:						// Go in the non-productive direction with low priority
+routefunc.cpp:			// DOR for the escape channel (VCs 0-1), low priority --- 
+routefunc.cpp:			// DOR for the escape channel (VCs 0-1), low priority 
+routefunc.cpp:	   void dim_order_torus( Router *r, priority_queue<order> * flit_order)
+routefunc.cpp:	_out_pri[A.p1]=true;	  
+routefunc.cpp:priority_queue<order> second_iter;
+routefunc.cpp:void dor_bless_mesh( Router *r, priority_queue<order> * flit_order)
+routefunc.cpp:		_out_pri[i]=false;
+routefunc.cpp:		else if((a2.p2!=-1) && (!_out_alloc[a2.p2]) && !_out_pri[a2.p2])
+routefunc.cpp:		else if((a2.p3!=-1) && (!_out_alloc[a2.p3]) && !_out_pri[a2.p3] )
+routefunc.cpp:		else if(!_out_alloc[a2.p4] && !_out_pri[a2.p4])
+routefunc.cpp:void dor_bless_mesh( Router *r, priority_queue<order> * flit_order)	//Permutaion network logic
+routefunc.cpp:void dor_bless_mesh( Router *r, priority_queue<order> * flit_order)	//BLESS sequntial port allocator
+routefunc.cpp:void dor_bless_mesh( Router *r, priority_queue<order> * flit_order)
+routefunc.cpp://cout<<"\nPrev:"<<rem_flit->id<<" Pri:"<<rem_flit->pri<<" New:"<<f->id<<" Pri:"<<f->pri<<endl;//getchar();
+routefunc.cpp://cout<<"\nPrev:"<<rem_flit->id<<" Pri:"<<rem_flit->pri<<" New:"<<f->id<<" Pri:"<<f->pri<<endl;getchar();
+routefunc.cpp:				Flit_queue.push(rem_flit);	//Pushing the old flit with low priority
+routefunc.cpp://			cout<<"\nPrev:"<<rem_flit->id<<" Pri:"<<rem_flit->pri<<" New:"<<f->id<<" Pri:"<<f->pri<<endl;getchar();
+routefunc.hpp:specific prior written permission.
+routefunc.hpp:typedef void (*bRoutingFunction)( Router *, priority_queue<order>* flit_order);//added shankar
+routefunc.hpp:extern bool _out_pri[5];
+stats.cpp:specific prior written permission.
+stats.hpp:specific prior written permission.
+traffic.cpp:specific prior written permission.
+traffic.hpp:specific prior written permission.
+trafficmanager.cpp:   specific prior written permission.
+trafficmanager.cpp:	// ============ Message priorities ============ 
+trafficmanager.cpp:	string priority;   // setting of priority field
+trafficmanager.cpp:	config.GetStr( "priority", priority );
+trafficmanager.cpp:	if ( priority == "class" )
+trafficmanager.cpp:		_pri_type = class_based;
+trafficmanager.cpp:	else if ( priority == "age" )
+trafficmanager.cpp:		_pri_type = age_based;
+trafficmanager.cpp:	else if ( priority == "network_age" )
+trafficmanager.cpp:		_pri_type = network_age_based;
+trafficmanager.cpp:	else if ( priority == "local_age" )
+trafficmanager.cpp:		_pri_type = local_age_based;
+trafficmanager.cpp:	else if ( priority == "queue_length" )
+trafficmanager.cpp:		_pri_type = queue_length_based;
+trafficmanager.cpp:	} else if ( priority == "hop_count" )
+trafficmanager.cpp:		_pri_type = hop_count_based;
+trafficmanager.cpp:	else if ( priority == "sequence" )
+trafficmanager.cpp:		_pri_type = sequence_based;
+trafficmanager.cpp:	else if ( priority == "none" )
+trafficmanager.cpp:		_pri_type = none;
+trafficmanager.cpp:		cerr << "Unkown priority value: " << priority << "!" << endl;
+trafficmanager.cpp:	_replies_inherit_priority = config.GetInt("replies_inherit_priority");
+trafficmanager.cpp:	_print_csv_results = config.GetInt( "print_csv_results" );
+trafficmanager.cpp:	_print_vc_stats = config.GetInt( "print_vc_stats" );
+trafficmanager.cpp:			switch( _pri_type ) {
+trafficmanager.cpp:					if((_slowest_flit[f->pri] < 0) ||
+trafficmanager.cpp:							(_latency_stats[f->pri]->Max() < (f->atime - f->time)))
+trafficmanager.cpp:						_slowest_flit[f->pri] = f->id;
+trafficmanager.cpp:					_latency_stats[f->pri]->AddSample( f->atime - f->time );
+trafficmanager.cpp:					_frag_stats[f->pri]->AddSample( (f->atime - head->atime) - (f->id - head->id) );
+trafficmanager.cpp:						_tlat_stats[f->pri]->AddSample( f->atime - f->ttime );
+trafficmanager.cpp:		switch( _pri_type ) {
+trafficmanager.cpp:				f->pri = cl;
+trafficmanager.cpp:				f->pri = _replies_inherit_priority ? -ttime : -time;
+trafficmanager.cpp:				f->pri = -_packets_sent[source];
+trafficmanager.cpp:				f->pri = 0;
+trafficmanager.cpp:			if(_pri_type == network_age_based)
+trafficmanager.cpp:										f->pri = -_time;
+trafficmanager.cpp:					if(_pri_type == network_age_based) {
+trafficmanager.cpp:						f->pri = -_time;
+trafficmanager.cpp:							<< " with priority " << f->pri
+trafficmanager.cpp:						if(_pri_type == network_age_based)
+trafficmanager.cpp:							f->pri = -_time;
+trafficmanager.cpp:								<< " at time " << _time << " with priority " << f->pri << "." << endl;
+trafficmanager.cpp:					<< " at time " << _time << " with priority " << f->pri << "." << endl;
+trafficmanager.cpp:	if(_print_vc_stats)
+trafficmanager.cpp:		if(_print_csv_results)
+trafficmanager.cpp:		VC::DisplayStats(_print_csv_results);
+trafficmanager.cpp:		if(_print_csv_results) {
+trafficmanager.hpp:specific prior written permission.
+trafficmanager.hpp:  // ============ Message priorities ============ 
+trafficmanager.hpp:  ePriority _pri_type;
+trafficmanager.hpp:  bool _replies_inherit_priority;
+trafficmanager.hpp:  bool _print_csv_results;
+trafficmanager.hpp:  bool _print_vc_stats;
+vc.cpp:specific prior written permission.
+vc.cpp:  string priority;
+vc.cpp:  config.GetStr( "priority", priority );
+vc.cpp:  if ( priority == "local_age" ) {
+vc.cpp:    _pri_type = local_age_based;
+vc.cpp:  } else if ( priority == "queue_length" ) {
+vc.cpp:    _pri_type = queue_length_based;
+vc.cpp:  } else if ( priority == "hop_count" ) {
+vc.cpp:    _pri_type = hop_count_based;
+vc.cpp:  } else if ( priority == "none" ) {
+vc.cpp:    _pri_type = none;
+vc.cpp:    _pri_type = other;
+vc.cpp:  _pri = 0;
+vc.cpp:  _priority_donation = config.GetInt("vc_priority_donation");
+vc.cpp:  // update flit priority before adding to VC buffer
+vc.cpp:  if(_pri_type == local_age_based)
+vc.cpp:    f->pri = -GetSimTime();
+vc.cpp:  else if(_pri_type == hop_count_based)
+vc.cpp:    f->pri = f->hops;
+vc.cpp:  if(_pri_type == queue_length_based)
+vc.cpp:    _pri = _buffer.size();
+vc.cpp:  else if(_pri_type != none)
+vc.cpp:    if((_pri_type != local_age_based) && _priority_donation)
+vc.cpp:    	  if(bf->pri > df->pri)
+vc.cpp:		    << " donates priority to flit " << f->id
+vc.cpp:		  << " sets priority to " << f->pri
+vc.cpp:    _pri = f->pri;
+vc.cpp:void VC::DisplayStats( bool print_csv )
+vc.cpp:  if(print_csv) {
+vc.hpp:specific prior written permission.
+vc.hpp:private:
+vc.hpp:  ePrioType _pri_type;
+vc.hpp:  int _pri;
+vc.hpp:  int _priority_donation;
+vc.hpp:  OutputSet *_route_set;// changed from private to public shankar
+vc.hpp:    return _pri;
+vc.hpp:  static void DisplayStats( bool print_csv = false );
+routers/chaos_router.cpp:specific prior written permission.
+routers/chaos_router.hpp:specific prior written permission.
+routers/event_router.cpp:specific prior written permission.
+routers/event_router.hpp:specific prior written permission.
+routers/event_router.hpp:#include "prio_arb.hpp"
+routers/event_router.hpp:private:
+routers/iq_router_base.cpp:specific prior written permission.
+routers/iq_router_base.cpp:  if(_print_activity){
+routers/iq_router_base.cpp:ofstream out1("priority__");
+routers/iq_router_base.cpp:priority_queue<order> order_flits;
+routers/iq_router_base.hpp:specific prior written permission.
+routers/iq_router_baseline.cpp:  specific prior written permission.
+routers/iq_router_baseline.cpp:      int out_priority = cur_vc->GetPriority( );
+routers/iq_router_baseline.cpp:	  int in_priority = iset->pri;
+routers/iq_router_baseline.cpp:	  // VCs.  These VCs can be prioritized by the routing function
+routers/iq_router_baseline.cpp:	  // and this is reflected in "in_priority".  On the output,
+routers/iq_router_baseline.cpp:	  // if multiple VCs are requesting the same output VC, the priority
+routers/iq_router_baseline.cpp:	  // of VCs is based on the actual packet priorities, which is
+routers/iq_router_baseline.cpp:	  // reflected in "out_priority".
+routers/iq_router_baseline.cpp:			 << " with priorities " << in_priority
+routers/iq_router_baseline.cpp:			 << " and " << out_priority
+routers/iq_router_baseline.cpp:				      out_vc, in_priority, out_priority);
+routers/iq_router_baseline.cpp:		  // the current request has a higher priority (this is default 
+routers/iq_router_baseline.cpp:		  // behavior of the allocators).  Switch allocation priorities 
+routers/iq_router_baseline.cpp:		  // are strictly determined by the packet priorities.
+routers/iq_router_baseline.cpp:			       << ", prio: " << cur_vc->GetPriority()
+routers/iq_router_baseline.cpp:		  // overload the packet priorities to prioritize 
+routers/iq_router_baseline.cpp:		  int vc_prio = iset->pri;
+routers/iq_router_baseline.cpp:				 << ", prio: " << cur_vc->GetPriority()
+routers/iq_router_baseline.cpp:		    // overload the packet priorities to prioritize non-
+routers/iq_router_baseline.hpp:specific prior written permission.
+routers/iq_router_baseline.hpp:private:
+routers/iq_router_combined.cpp:specific prior written permission.
+routers/iq_router_combined.cpp:	      int in_priority;
+routers/iq_router_combined.cpp:	      // highest priority for this port
+routers/iq_router_combined.cpp:		int vc_prio;
+routers/iq_router_combined.cpp:		int out_vc = route_set->GetVC(output, vc_index, &vc_prio);
+routers/iq_router_combined.cpp:		   (!do_request || (vc_prio > in_priority)) &&
+routers/iq_router_combined.cpp:		  in_priority = vc_prio;
+routers/iq_router_combined.cpp:		// current request has a higher priority (this is default 
+routers/iq_router_combined.cpp:		// behavior of the allocators). Switch allocation priorities 
+routers/iq_router_combined.cpp:		// are strictly determined by the packet priorities.
+routers/iq_router_combined.cpp:					  in_priority, cur_vc->GetPriority());
+routers/iq_router_combined.cpp:	    int sel_prio = -1;
+routers/iq_router_combined.cpp:	      int out_prio;
+routers/iq_router_combined.cpp:	      int out_vc = route_set->GetVC(output, vc_index, &out_prio);
+routers/iq_router_combined.cpp:		 (out_prio > sel_prio)) {
+routers/iq_router_combined.cpp:		sel_prio = out_prio;
+routers/iq_router_combined.hpp:specific prior written permission.
+routers/iq_router_combined.hpp:private:
+routers/iq_router_split.cpp:specific prior written permission.
+routers/iq_router_split.cpp:	      int in_priority;
+routers/iq_router_split.cpp:	      // highest priority for this port
+routers/iq_router_split.cpp:		int vc_prio;
+routers/iq_router_split.cpp:		int out_vc = route_set->GetVC(output, vc_index, &vc_prio);
+routers/iq_router_split.cpp:		if(!do_request || (vc_prio > in_priority)) {
+routers/iq_router_split.cpp:		  in_priority = vc_prio;
+routers/iq_router_split.cpp:		// current request has a higher priority (this is default 
+routers/iq_router_split.cpp:		// behavior of the allocators). Switch allocation priorities 
+routers/iq_router_split.cpp:		// are strictly determined by the packet priorities.
+routers/iq_router_split.cpp:					  in_priority, cur_vc->GetPriority());
+routers/iq_router_split.cpp:	  int in_priority;
+routers/iq_router_split.cpp:	    int vc_prio;
+routers/iq_router_split.cpp:	    int out_vc = route_set->GetVC(output, vc_index, &vc_prio);
+routers/iq_router_split.cpp:	    if(!do_request || (vc_prio > in_priority)) {
+routers/iq_router_split.cpp:	      in_priority = vc_prio;
+routers/iq_router_split.cpp:	    // current request has a higher priority (this is default 
+routers/iq_router_split.cpp:	    // behavior of the allocators). Switch allocation priorities 
+routers/iq_router_split.cpp:	    // are strictly determined by the packet priorities.
+routers/iq_router_split.cpp:				      in_priority, cur_vc->GetPriority());
+routers/iq_router_split.cpp:	    int sel_prio = -1;
+routers/iq_router_split.cpp:	      int out_prio;
+routers/iq_router_split.cpp:	      int out_vc = route_set->GetVC(output, vc_index, &out_prio);
+routers/iq_router_split.cpp:	      if(out_prio > sel_prio) {
+routers/iq_router_split.cpp:		sel_prio = out_prio;
+routers/iq_router_split.hpp:specific prior written permission.
+routers/iq_router_split.hpp:private:
+routers/MECSChannels.cpp:specific prior written permission.
+routers/MECSChannels.hpp:specific prior written permission.
+routers/MECSCombiner.cpp:specific prior written permission.
+routers/MECSCombiner.hpp:specific prior written permission.
+routers/MECSCreditChannel.cpp:specific prior written permission.
+routers/MECSCreditChannel.hpp:specific prior written permission.
+routers/MECSCreditCombiner.cpp:specific prior written permission.
+routers/MECSCreditCombiner.hpp:specific prior written permission.
+routers/MECSCreditForwarder.cpp:specific prior written permission.
+routers/MECSCreditForwarder.hpp:specific prior written permission.
+routers/MECSForwarder.cpp:specific prior written permission.
+routers/MECSForwarder.hpp:specific prior written permission.
+routers/MECSRouter.cpp:specific prior written permission.
+routers/MECSRouter.hpp:specific prior written permission.
+routers/router.cpp:specific prior written permission.
+routers/router.hpp:specific prior written permission.
+routers/router.hpp://to order the flits based on their priority
+routers/router.hpp:	int pri;
+routers/router.hpp:	order(int p=0, Flit *temp=NULL,   VC *vc1=NULL): pri(p), f(temp), vc(vc1) {}
+routers/router.hpp:	                if(x.pri < y.pri)
+pri 

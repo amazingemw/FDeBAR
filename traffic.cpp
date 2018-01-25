@@ -333,7 +333,7 @@ void InitializeTrafficMap( )
 {
 
 
-  /* Register Traffic functions here */
+  /* Register Traffic functions here */ 
 
   gTrafficFunctionMap["uniform"]  = &uniform;
 
@@ -358,7 +358,7 @@ void InitializeTrafficMap( )
   gTrafficFunctionMap["taper64"]    = &taper64;
 
   gTrafficFunctionMap["bad_dragon"]    = &badperm_dflynew;
-
+	cout<<"trafficmap initialized...."<<endl; // added John
 }
 
 void ResetTrafficFunction( )

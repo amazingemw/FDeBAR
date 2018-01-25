@@ -169,10 +169,15 @@ public:
 	       int inputs, int outputs );
   virtual ~EventRouter( );
 
+  virtual void BufferReinject(); //For MinBD
+  virtual void Redirect();
+  virtual void Eject();
   virtual void ReadInputs( );
   virtual void InternalStep( );
   virtual void WriteOutputs( );
-
+  virtual bool is4free();
+  
+  void _BlessWrite();
   virtual int GetCredit(int out, int vc_begin, int vc_end ) const {return 0;}
   virtual int GetBuffer(int i = -1) const {return 0;}
   virtual int GetReceivedFlits(int i = -1) const {return 0;}

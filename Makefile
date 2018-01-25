@@ -36,15 +36,15 @@ YACC   = /usr/bin/bison -d
 LEX    = /usr/bin/flex
 PURIFY = /usr/bin/purify
 QUANT  = /usr/bin/quantify
-DEFINE = -DUSE_GUI
+DEFINE = 
 DEFINE_TEST = -DUSE_GUI
 INCPATH = -I. -Iarbiters -Iallocators -Irouters -Inetworks 
-CPPFLAGS = -O3  -ggdb $(INCPATH) $(DEFINE) 
+CPPFLAGS = -O0  -ggdb $(INCPATH) $(DEFINE) 
 LFLAGS =  
 
 
 OBJDIR := obj
-PROG   := booksim
+PROG   := minbd
 
 # simulator source files
 CPP_SRCS = main.cpp \
@@ -66,7 +66,8 @@ CPP_SRCS = main.cpp \
    misc_utils.cpp\
    rng_wrapper.cpp\
    rng_double_wrapper.cpp\
-   power_module.cpp 
+   power_module.cpp\
+   fault.cpp\
 
 ifeq ($(DEFINE) , $(DEFINE_TEST))
 	CPP_SRCS += \

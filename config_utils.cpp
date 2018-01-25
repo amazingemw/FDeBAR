@@ -43,191 +43,230 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "config_utils.hpp"
 
 Configuration *Configuration::theConfig = 0;
+int zz=0; int matchsec=0; // added John
 
 Configuration::Configuration( )
 {
-  theConfig = this;
-  _config_file = 0;
+	  theConfig = this;
+	  _config_file = 0;
 }
 
 void Configuration::AddStrField( const string &field, const string &value )
 {
-  _str_map[field] = strdup( value.c_str( ) );
+	
+  	_str_map[field] = strdup( value.c_str( ) );
+	 cout<<"param"<<zz++<<"   "<<field<<"=  "<<_str_map[field]<<endl;// added John
 }
 
-void Configuration::Assign( const string &field, const string &value )
-{
-  map<string,char *>::const_iterator match;
-  
-  match = _str_map.find( field );
-  if ( match != _str_map.end( ) ) {
-    free( _str_map[field] );
-    _str_map[field] = strdup( value.c_str( ) );
-  } else {
-    string errmsg = "Unknown field ";
-    errmsg += field;
 
-    ParseError( errmsg, 0 );
-  }
+// Reading each field in config file, Based on type of field value the 3 following functions are accordingly called. 
+void Configuration::Assign( const string &field, const string &value ) // for string values
+{
+	  map<string,char *>::const_iterator match;
+	  
+	  match = _str_map.find( field );		// find a match  in all fields..
+	  if ( match != _str_map.end( ) ) 
+	  {
+		    free( _str_map[field] );
+		    _str_map[field] = strdup( value.c_str( ) );
+		   cout<<"param"<<zz++<<" S "<<field<<" = "<<_str_map[field]<<endl;// added John
+	  } 
+	  else
+	 {
+		    string errmsg = "Unknown field string ";
+		    errmsg += field;
+
+		    ParseError( errmsg, 0 );
+	  }
+	
 }
 
-void Configuration::Assign( const string &field, unsigned int value )
+void Configuration::Assign( const string &field, unsigned int value )  // for int
 {
-  map<string,unsigned int>::const_iterator match;
-  
-  match = _int_map.find( field );
-  if ( match != _int_map.end( ) ) {
-    _int_map[field] = value;
-  } else {
-    string errmsg = "Unknown field ";
-    errmsg += field;
+	  map<string,unsigned int>::const_iterator match;
+	  
+	  match = _int_map.find( field );
+	  if ( match != _int_map.end( ) ) 
+	 {
+	   	 _int_map[field] = value;
+			cout<<"param"<<zz++<<" I  "<<field<<" = "<<_int_map[field]<<endl;// added John
+	 }
+	 else
+	 {
+		    string errmsg = "Unknown field int ";
+		    errmsg += field;
 
-    ParseError( errmsg, 0 );
-  }
+		    ParseError( errmsg, 0 );
+	  }
 }
 
-void Configuration::Assign( const string &field, double value )
+void Configuration::Assign( const string &field, double value )  // for double
 {
-  map<string,double>::const_iterator match;
-  
-  match = _float_map.find( field );
-  if ( match != _float_map.end( ) ) {
-    _float_map[field] = value;
-  } else {
-    string errmsg = "Unknown field ";
-    errmsg += field;
+	  map<string,double>::const_iterator match;
+	  
+	  match = _float_map.find( field );
+	  if ( match != _float_map.end( ) )
+	  {
+	   	 _float_map[field] = value;
+		cout<<"param"<<zz++<<" F  "<<field<<" = "<<_float_map[field]<<endl;// added John
+	  }
+	 else
+	 {
+		    string errmsg = "Unknown field double ";
+		    errmsg += field;
 
-    ParseError( errmsg, 0 );
-  }
+		    ParseError( errmsg, 0 );
+	 }
 }
 
 void Configuration::GetStr( const string &field, string &value, const string &def ) const
 {
-  map<string,char *>::const_iterator match;
+	 map<string,char *>::const_iterator match;
 
-  match = _str_map.find( field );
-  if ( match != _str_map.end( ) ) {
-    value = match->second;
-  } else {
-    value = def;
-  }
+	 match = _str_map.find( field );
+	 if ( match != _str_map.end( ) )
+	 {
+	  	value = match->second;
+		//matchsec++; // John
+	 }
+	 else
+	 {
+		value = def;
+	 }
 }
 
 unsigned int Configuration::GetInt( const string &field, unsigned int def ) const
 {
-  map<string,unsigned int>::const_iterator match;
-  unsigned int r = def;
+	  map<string,unsigned int>::const_iterator match;
+	  unsigned int r = def;
 
-  match = _int_map.find( field );
-  if ( match != _int_map.end( ) ) {
-    r = match->second;
-  }
+	  match = _int_map.find( field );
+	  if ( match != _int_map.end( ) )
+	 {
+	  	r = match->second;
+		//matchsec++; // John
+	  }
 
-  return r;
+	  return r;
 }
 
 double Configuration::GetFloat( const string &field, double def ) const
 {  
-  map<string,double>::const_iterator match;
-  double r = def;
+	  map<string,double>::const_iterator match;
+	  double r = def;
 
-  match = _float_map.find( field );
-  if ( match != _float_map.end( ) ) {
-    r = match->second;
-  }
+	  match = _float_map.find( field );
+	  if ( match != _float_map.end( ) )
+	 {
+	  	r = match->second;
+		//matchsec++; // John
+	  }
 
-  return r;
+	  return r;
 }
 
 void Configuration::ParseFile( const string& filename )
 {
-  if ( ( _config_file = fopen( filename.c_str( ), "r" ) ) == 0 ) {
-    cerr << "Could not open configuration file " << filename << endl;
-    exit( -1 );
-  }
+	  if ( ( _config_file = fopen( filename.c_str( ), "r" ) ) == 0 )  // if config file couldnot be opened, show error
+	 {
+		cerr << "Could not open configuration file " << filename << endl;
+		exit( -1 );
+	  }
 
-  configparse( );
+	  configparse( );
 
-  fclose( _config_file );
-  _config_file = 0;
+	  fclose( _config_file );
+	  _config_file = 0;
 }
 
 void Configuration::ParseString( const string& str )
 {
-  _config_string = str + ';';
-  configparse( );
-  _config_string = "";
+	  _config_string = str + ';';
+	  configparse( );
+	  _config_string = "";
 }
 
 int Configuration::Input( char *line, int max_size )
 {
-  int length = 0;
+	  int length = 0;
 
-  if ( _config_file ) {
-    length = fread( line, 1, max_size, _config_file );
-  } else {
-    length = _config_string.length();
-    _config_string.copy(line, max_size);
-    _config_string.clear();
-  }
+	  if ( _config_file )
+	  {
+	  	   length = fread( line, 1, max_size, _config_file );
+	  } 
+	  else
+	  {
+		    length = _config_string.length();
+		    _config_string.copy(line, max_size);
+		    _config_string.clear();
+	  }
 
-  return length;
+	  return length;
 }
 
 void Configuration::ParseError( const string &msg, unsigned int lineno ) const
 {
-  if ( lineno ) {
-    cerr << "Parse error on line " << lineno << " : " << msg << endl;
-  } else {
-    cerr << "Parse error : " << msg << endl;
-  }
-
-
-  exit( -1 );
+	 if ( lineno )
+	 {
+	   	 cerr << "Parse error on line " << lineno << " : " << msg << endl;  // invokes when any field is having unmatched field values.
+	 } 
+	 else
+	 {
+	  	cerr << "Parse error : " << msg << endl;
+	 }
+	 exit( -1 );
 }
 
 Configuration *Configuration::GetTheConfig( )
 {
-  return theConfig;
+	return theConfig;
 }
 
 //============================================================
 
 int config_input( char *line, int max_size )
 {
-  return Configuration::GetTheConfig( )->Input( line, max_size );
+	return Configuration::GetTheConfig( )->Input( line, max_size );
 }
 
 bool ParseArgs( Configuration *cf, int argc, char **argv )
 {
-  bool rc = false;
-
-  //all dashed variables are ignored by the arg parser
-  for(int i = 1; i < argc; ++i) {
-    string arg(argv[i]);
-    size_t pos = arg.find('=');
-    bool dash = (argv[i][0] =='-');
-    if(pos == string::npos && !dash) {
-      // parse config file
-      cf->ParseFile( argv[i] );
-      ifstream in(argv[i]);
-      cout << "BEGIN Configuration File: " << argv[i] << endl;
-      while (!in.eof()) {
-	char c;
-	in.get(c);
-	cout << c ;
-      }
-      cout << "END Configuration File: " << argv[i] << endl;
-      rc = true;
-    } else if(pos != string::npos)  {
-      // override individual parameter
-      cout << "OVERRIDE Parameter: " << arg << endl;
-      cf->ParseString(argv[i]);
-    }
-  }
-
-  return rc;
-}
+	bool rc = false;
+	//cout<<"file is "<<argc  <<"argv is "<<*argv <<endl;   //  added JOHN 
+	
+	//all dashed variables are ignored by the arg parser
+	for(int i = 1; i < argc; ++i)
+	{
+		string arg(argv[i]);
+		cout<< "Configuration file : "<<argv[i] <<endl;   //  added JOHN now arg contains the fullpath of config file
+		size_t pos = arg.find('=');
+	    	bool dash = (argv[i][0] =='-');
+	    	if(pos == string::npos && !dash)
+		{
+	      		// parse config file
+			cout<<"######..Parsing config file ....##########"<<endl;       //  added JOHN
+	      		cf->ParseFile( argv[i] );                      // calling ParseFile Function with arguementa s config file.
+	      		ifstream in(argv[i]);
+	      		//cout << "BEGIN Configuration File: " << argv[i] << endl;
+	      		while (!in.eof())
+			{
+				char c;
+				in.get(c);
+				// cout << c ;   //commented John .. display config file contents on screen (optional..)
+	      		}
+	      		cout << "END Configuration File: " << argv[i] << endl;
+			//cout<<"matchsec="<<matchsec<<endl;
+			rc = true;
+	    	}
+		else if(pos != string::npos)
+		{
+	 		// override individual parameter
+			cout << "OVERRIDE Parameter: " << arg << endl;
+			cf->ParseString(argv[i]);
+	    	}
+	  } // end for
+	  return rc;
+}  // end ParseArgs
 
 
 //helpful for the GUI, write out nearly all variables contained in a config file.
