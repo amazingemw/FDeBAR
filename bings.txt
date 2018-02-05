@@ -69,153 +69,153 @@ _sim_time= 20000
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :0
 Minimum latency = 3
-Average latency = 23.461
-Maximum latency = 343
+Average latency = 16.6546
+Maximum latency = 59
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
+Accepted packets = 1 at node -1138881072 (avg = 1)
 latency change    = 1
 throughput change = 1
 completed warm up phase: 0
 
-Total no of deflections:  29990
-Total no of flits: 19100
-Total no of ejected flits: 14568
+Total no of deflections:  14766
+Total no of flits: 19109
+Total no of ejected flits: 14322
 Iteration  0 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :1
 Minimum latency = 3
-Average latency = 23.4051
-Maximum latency = 343
+Average latency = 16.7968
+Maximum latency = 63
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.00238858
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.00846654
 throughput change = 0
 completed warm up phase: 1
 
-Total no of deflections:  59926
-Total no of flits: 38263
-Total no of ejected flits: 29654
+Total no of deflections:  30057
+Total no of flits: 38272
+Total no of ejected flits: 28858
 Iteration  1 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :2
 Minimum latency = 3
-Average latency = 23.4298
-Maximum latency = 343
+Average latency = 16.7676
+Maximum latency = 63
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.00105591
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.00173916
 throughput change = 0
 completed warm up phase: 2
 
-Total no of deflections:  89755
-Total no of flits: 57402
-Total no of ejected flits: 44630
+Total no of deflections:  44832
+Total no of flits: 57408
+Total no of ejected flits: 43475
 Iteration  2 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :3
 Minimum latency = 3
-Average latency = 23.3677
-Maximum latency = 343
+Average latency = 16.7852
+Maximum latency = 63
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.00265982
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.00104374
 throughput change = 0
 completed warm up phase: 3
 
-Total no of deflections:  119002
-Total no of flits: 76539
-Total no of ejected flits: 59656
+Total no of deflections:  59493
+Total no of flits: 76554
+Total no of ejected flits: 58070
 Iteration  3 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :4
 Minimum latency = 3
-Average latency = 23.3466
-Maximum latency = 343
+Average latency = 16.7711
+Maximum latency = 63
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.000903117
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.000838668
 throughput change = 0
 completed warm up phase: 4
 
-Total no of deflections:  148293
-Total no of flits: 95599
-Total no of ejected flits: 74736
+Total no of deflections:  74110
+Total no of flits: 95601
+Total no of ejected flits: 72675
 Iteration  4 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :5
 Minimum latency = 3
-Average latency = 23.4394
-Maximum latency = 391
+Average latency = 16.7764
+Maximum latency = 63
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.00395777
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.000314951
 throughput change = 0
 completed warm up phase: 5
 
-Total no of deflections:  178961
-Total no of flits: 114724
-Total no of ejected flits: 89591
+Total no of deflections:  88983
+Total no of flits: 114732
+Total no of ejected flits: 87159
 Iteration  5 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :6
 Minimum latency = 3
-Average latency = 23.5053
-Maximum latency = 439
+Average latency = 16.783
+Maximum latency = 63
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.00280308
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.000394254
 throughput change = 0
 completed warm up phase: 6
 
-Total no of deflections:  209475
-Total no of flits: 134028
-Total no of ejected flits: 104530
+Total no of deflections:  104227
+Total no of flits: 134030
+Total no of ejected flits: 101793
 Iteration  6 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :7
 Minimum latency = 3
-Average latency = 23.5079
-Maximum latency = 439
+Average latency = 16.7938
+Maximum latency = 63
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.000111307
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.000645866
 throughput change = 0
 completed warm up phase: 7
 
-Total no of deflections:  239725
-Total no of flits: 153255
-Total no of ejected flits: 119570
+Total no of deflections:  119411
+Total no of flits: 153258
+Total no of ejected flits: 116447
 Iteration  7 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :8
 Minimum latency = 3
-Average latency = 23.5125
-Maximum latency = 439
+Average latency = 16.7981
+Maximum latency = 66
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.000197806
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.000254092
 throughput change = 0
 completed warm up phase: 8
 
-Total no of deflections:  269944
-Total no of flits: 172527
-Total no of ejected flits: 134646
+Total no of deflections:  134380
+Total no of flits: 172541
+Total no of ejected flits: 131138
 Iteration  8 over
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :9
 Minimum latency = 3
-Average latency = 23.574
-Maximum latency = 439
+Average latency = 16.7922
+Maximum latency = 66
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.00260849
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.000351958
 throughput change = 0
 completed warm up phase: 9
 Warmed up ...Time used is 10000 cycles
 
-Total no of deflections:  300988
-Total no of flits: 191685
-Total no of ejected flits: 149456
+Total no of deflections:  149263
+Total no of flits: 191691
+Total no of ejected flits: 145714
 Iteration  9 over
 
 Update period: 20000
@@ -230,36 +230,36 @@ Now Measurment Stage will run for 20000 cycles
 ++++++++++++++++++++++++++++++++++++++
 simulation in Phase: Iteration :10
 Minimum latency = 3
-Average latency = 23.6783
-Maximum latency = 460
+Average latency = 16.8271
+Maximum latency = 74
 Average fragmentation = 0
-Accepted packets = 1 at node -948114992 (avg = 1)
-latency change    = 0.00440308
+Accepted packets = 1 at node -1138881072 (avg = 1)
+latency change    = 0.00207482
 throughput change = 0
 completed one running phase
 flag converged == 1
 
-Total no of deflections:  909375
-Total no of flits: 575349
-Total no of ejected flits: 448897
+Total no of deflections:  450407
+Total no of flits: 575359
+Total no of ejected flits: 437270
 Iteration  10 over
 
 
-====>> The Average latency: 23.6783
-====>> No of deflection in measurment phase: 608387
-====>> No of flits injected in measurment phase: 383664
-====>> No of flits ejected in measurment phase: 299441
+====>> The Average latency: 16.8271
+====>> No of deflection in measurment phase: 301144
+====>> No of flits injected in measurment phase: 383668
+====>> No of flits ejected in measurment phase: 291556
 
 No of flits for each hop count
 HOP COUNT	FLITS		PERCENT
-0		119360		26.5896
-1		100730		22.4394
-2		85093		18.956
-3		60679		13.5174
-4		37472		8.34757
-5		20968		4.671
-6		10904		2.42907
-7		13691		3.04992
+0		266434		60.9312
+1		110920		25.3665
+2		40137		9.179
+3		13731		3.14017
+4		4240		0.969653
+5		1300		0.297299
+6		350		0.0800421
+7		158		0.0361333
 
-POWER CONSUMPTION: 773105 units (taking into account flits with 6 or less deflections)
+POWER CONSUMPTION: 257947 units (taking into account flits with 6 or less deflections)
 END

@@ -538,8 +538,8 @@ if(_bless)
        //cout<<"\nHurreee"<<f->id<<" Port:"<<f->port<<endl;
   	   flitbuff2.push_back(f);
 
-  	   //order_flits.push( order (f->hop_dist, f, fake) );  //##INFD 
-       order_flits.push( order (f->ndefl, f, fake) ); //##INFD
+  	   order_flits.push( order (f->hop_dist, f, fake) );  //##INFD 
+       //order_flits.push( order (f->ndefl, f, fake) ); //##INFD
        
        cnt++;
     }

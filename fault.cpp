@@ -44,9 +44,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 map<int, int> RouterFaultMap;
 
-void InitializeFaultMap(){		    	//GUIDE
-	RouterFaultMap[0] = 21;    			//31=all available
-	RouterFaultMap[1] = 23;    			//30=east not available
+void InitializeFaultMap(){		    	//GUIDE										   ->
+	RouterFaultMap[0] = 21;    			//31=all available                   Notation 11111 
+	RouterFaultMap[1] = 23;    			//30=east not available						   SNWE
 	RouterFaultMap[2] = 23;    			//29=west not available
 	RouterFaultMap[3] = 23;    			//27=north not available
 	RouterFaultMap[4] = 23;    			//23=south not available
@@ -64,7 +64,7 @@ void InitializeFaultMap(){		    	//GUIDE
 	RouterFaultMap[15] = 30;      //   |  |  |  |  |  |  |  |
 								  //  32_33_34_35_36_37_38_39
 	RouterFaultMap[16] = 29;      // W |  |  |  |  |  |  |  | E
-	RouterFaultMap[17] = 31;	  //  24_25_26_27+28_29_30_31
+	RouterFaultMap[17] = 31;	  //  24_25_26_27_28_29_30_31
 	RouterFaultMap[18] = 31;      //   |  |  |  |  |  |  |  |
 	RouterFaultMap[19] = 31;      //  16_17_18_19_20_21_22_23
 	RouterFaultMap[20] = 31;      //   |  |  |  |  |  |  |  |

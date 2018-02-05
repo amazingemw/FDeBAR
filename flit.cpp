@@ -57,6 +57,11 @@ Flit::Flit()
 {  
   type      = ANY_TYPE ;
   vc        = -1 ;
+  //INFD CODE
+  for(int i=0;i<64;i++){
+    loop_chk[i]=0;
+  }
+  //INFD ENDS
   head      = false ;
   tail      = false ;
   true_tail = false ;

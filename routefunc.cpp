@@ -2173,7 +2173,7 @@ int s = (gK-1);
 
 //For Edges and corners, what are the available ports
 
-
+/*
 if(r->GetID()/gK == 0)
 avail_ports[3]=0;
 else if(r->GetID()/gK == s)
@@ -2378,6 +2378,11 @@ list<Flit *>::iterator it1;
    int a=RandomInt(Defl.size());
    list<Flit *>::iterator it2;
 
+   /*INFD
+   Add a new variable to flit class to denote how much time it loops in same side buffer.
+   see if count exceeds 2 or more and then output the faulty flit.
+   */
+
 if(_Mod_MinBD == "true")	//Selecting deflected flit for side buffer
 {
 int temp = 0;
@@ -2393,19 +2398,48 @@ int temp = 0;
   }
 }
 
+//INFD CODE
+/*static int xe;
+list<Flit *>::iterator itx;
+if(r->GetID()==34 || r->GetID()==26) {
+	cout<<"Round:"<<xe<<endl;
+	xe++;
+	for(itx=Defl.begin();itx!=Defl.end();itx++){
+		f = *itx;
+		cout<<"\nRouter: "<<r->GetID()<<" Flit: "<<f->id<<" Port:"<<f->cur_port<<" Dest:"<<f->dest<<" dfadf"<<f->get_port<<endl;
+	}
+	for(itx=non_defl.begin();itx!=non_defl.end();itx++){
+		f = *itx;
+		cout<<"\nRouter: "<<r->GetID()<<" Flit: "<<f->id<<" Port:"<<f->cur_port<<" Dest:"<<f->dest<<" dfadf"<<f->get_port<<endl;
+	}
+	cout<<endl;
+}*/
+//INFD ENDS
+
+
 i = 0;
 //Moving random flit to side_buffer
   for ( it2=Defl.begin() ; it2 != Defl.end(); it2++ )
   {
 	f = *it2;
-	if( a == i && r->sidebuff.size()<sb_size )
+	if( a == i && r->sidebuff.size()<sb_size )             //Deflected flit with highest hop dist is chosen to side buffer
 	{
-	r->sidebuff.push(f);
-//	if(  r->sidebuff.size() >= 3 )
-//	{cout<<r->GetID()<<" size: "<<r->sidebuff.size()<<endl;getchar();}
+		//INFD CODE
+		if(f->loop_chk[r->GetID()] > 1){ //&& f->id<=100){//&& (r->GetID()==34||r->GetID()==26)){
+			cout<<"FLIT ID "<< f->id <<" SB BACK AT ROUTER NO" << r->GetID()<<" for the time "<<f->loop_chk[r->GetID()]<<endl;
+		}
+		++f->loop_chk[r->GetID()]; 
+		if(f->loop_chk[r->GetID()]>1){
+			continue;
+		}
+		//INFD ENDS
+
+		r->sidebuff.push(f);
+	//	if(  r->sidebuff.size() >= 3 )
+	//	{cout<<r->GetID()<<" size: "<<r->sidebuff.size()<<endl;getchar();}
 	}
 	else
-	non_defl.push_back(f);	
+		non_defl.push_back(f);	     //Pushing all output flits in one single list 
 	i++;
   }
 

@@ -1,3 +1,46 @@
+AFTER SB LIMIT INTRO (2 February 2018)
+
+I.No of hops priority
+
+	No of flits for each hop count
+	HOP COUNT	FLITS		PERCENT
+	0		266434		60.9312
+	1		110920		25.3665
+	2		40137		9.179
+	3		13731		3.14017
+	4		4240		0.969653
+	5		1300		0.297299
+	6		350		0.0800421
+	7		158		0.0361333
+
+	POWER CONSUMPTION: 257947 units 
+
+II.No of Deflections Priority
+
+		No of flits for each hop count
+		HOP COUNT	FLITS		PERCENT
+		0		169328		37.8376
+		1		166699		37.2501
+		2		91827		20.5194
+		3		18553		4.1458
+		4		1087		0.242898
+		5		19		0.00424569
+		6		0		0
+		7		0		0
+
+	POWER CONSUMPTION: 410455 units 
+
+	There is almost a 50 percent deflection reduction and
+	around 9-12 percent increase in number of flits reaching
+	destination with no deflection at all.
+
+	How to implememt.
+	Use 3 bit boolean in each flit to store memory of SB injection in last 3 routers it had gone. OR if lavish,
+	use a 64 bit bool array for each router. (find better
+	ways)
+
+
+January Results 
 ################################################################
 ####### DEBAR FAULT REPORT######################################
 ################################################################ 
@@ -94,6 +137,7 @@ II. No of deflections Priority
 
 
 		
+
 
 
 

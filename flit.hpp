@@ -46,6 +46,10 @@ struct Flit {
 
   int vc;
 
+  //INFD CODE
+  int loop_chk[100];     //Checks if flit loops in SB
+  //INFD ENDS
+
   bool head;
   bool tail;
   bool true_tail;
